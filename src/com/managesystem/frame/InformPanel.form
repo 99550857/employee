@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.managesystem.frame.InformPanel">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="847" height="773"/>
+    </constraints>
+    <properties>
+      <background color="-4462890"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="70f4" layout-manager="FlowLayout" hgap="5" vgap="20" flow-align="1">
+        <constraints border-constraint="West"/>
+        <properties>
+          <alignmentY value="0.5"/>
+          <preferredSize width="140" height="24"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <grid id="15251" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints/>
+            <properties>
+              <preferredSize width="24" height="50"/>
+            </properties>
+            <border type="none"/>
+            <children/>
+          </grid>
+          <component id="84369" class="javax.swing.JLabel" binding="readLabel">
+            <constraints/>
+            <properties>
+              <font size="16"/>
+              <preferredSize width="120" height="17"/>
+              <text value="通知查看"/>
+            </properties>
+          </component>
+          <component id="309df" class="javax.swing.JLabel" binding="departmentInform">
+            <constraints/>
+            <properties>
+              <font size="16"/>
+              <preferredSize width="120" height="17"/>
+              <text value="通知发布"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="63ba7" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="North"/>
+        <properties>
+          <opaque value="true"/>
+          <preferredSize width="100" height="80"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="ee9d5" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <font size="24"/>
+              <text value="公司通知"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="c9f80" binding="cardPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <grid id="a2055" binding="sendCard" layout-manager="GridLayoutManager" row-count="8" column-count="9" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card1"/>
+            </constraints>
+            <properties>
+              <opaque value="true"/>
+              <visible value="false"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <component id="db2a5" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="1" column="1" row-span="2" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="发布人："/>
+                </properties>
+              </component>
+              <component id="1559e" class="javax.swing.JLabel" binding="nameLabel">
+                <constraints>
+                  <grid row="1" column="2" row-span="2" col-span="4" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="eaeb" class="javax.swing.JLabel">
+                <constraints>
+                  <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="正文："/>
+                </properties>
+              </component>
+              <component id="79c1" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+                <constraints>
+                  <grid row="4" column="2" row-span="1" col-span="4" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
+                    <preferred-size width="150" height="50"/>
+                  </grid>
+                </constraints>
+                <properties>
+                  <margin top="20" left="20" bottom="20" right="20"/>
+                </properties>
+              </component>
+              <component id="5e1ad" class="javax.swing.JButton" binding="upButton">
+                <constraints>
+                  <grid row="6" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="3" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <text value="确认发布"/>
+                </properties>
+              </component>
+              <grid id="edada" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="1" column="0" row-span="6" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-8354939"/>
+                </properties>
+                <border type="none"/>
+                <children>
+                  <grid id="cc4b9" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="50" height="24"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="c6b5b" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="6" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="22ae8" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="80"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="7501c" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="7" column="2" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="984fe" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <minimumSize width="24" height="100"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="aac14" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="6" row-span="8" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="efd20" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="100" height="24"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="d85ba" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="5" column="2" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="82891" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="50"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="e0a07" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="885dc" layout-manager="FlowLayout" hgap="10" vgap="20" flow-align="0">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="100"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="c5749" class="javax.swing.JLabel">
+                        <constraints/>
+                        <properties>
+                          <text value="标题："/>
+                        </properties>
+                      </component>
+                      <component id="5f1df" class="javax.swing.JTextField" binding="titleTextField">
+                        <constraints/>
+                        <properties>
+                          <columns value="100"/>
+                          <preferredSize width="1114" height="30"/>
+                        </properties>
+                      </component>
+                      <component id="53f35" class="javax.swing.JLabel" binding="promptLabel">
+                        <constraints/>
+                        <properties>
+                          <foreground color="-45056"/>
+                          <text value="不能为空！！"/>
+                          <visible value="false"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+          <grid id="accb7" binding="modifyCard" layout-manager="GridLayoutManager" row-count="5" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+            <margin top="0" left="0" bottom="0" right="0"/>
+            <constraints>
+              <card name="Card2"/>
+            </constraints>
+            <properties>
+              <visible value="true"/>
+            </properties>
+            <border type="none"/>
+            <children>
+              <grid id="e5e7d" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="1" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="ef73f" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="300"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="baade" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints border-constraint="North"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="e1564" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="单位最新全体公告"/>
+                            </properties>
+                          </component>
+                          <hspacer id="74635">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <component id="d0db5" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="更多"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <scrollpane id="145d3">
+                        <constraints border-constraint="Center"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="ac913" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                            <constraints/>
+                            <properties/>
+                            <border type="none"/>
+                            <children/>
+                          </grid>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="f8bb4" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="1" column="0" row-span="3" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="aee99" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <foreground color="-657929"/>
+                      <preferredSize width="50" height="0"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="7f9a8" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="2" column="1" row-span="1" col-span="3" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="c1ffe" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="30"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="36162" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="4" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="ebfdd" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="30"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="62ca0" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="0" column="4" row-span="4" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="9ff94" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="50" height="24"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="4ce4c" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="4" column="0" row-span="1" col-span="5" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="bfdf7" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="24" height="50"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="ecb62" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="7fd72" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="300" height="400"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="7bc78" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints border-constraint="North"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="42d54" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="部门最新通知"/>
+                            </properties>
+                          </component>
+                          <hspacer id="6fc25">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <component id="97f2" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="更多"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <scrollpane id="75c78">
+                        <constraints border-constraint="Center"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <grid id="e212b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                            <margin top="0" left="0" bottom="0" right="0"/>
+                            <constraints/>
+                            <properties/>
+                            <border type="none"/>
+                            <children/>
+                          </grid>
+                        </children>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="86979" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="377d2" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="300" height="300"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <grid id="b4d0d" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                        <margin top="0" left="0" bottom="0" right="0"/>
+                        <constraints border-constraint="North"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children>
+                          <component id="da36c" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="个人发布通知"/>
+                            </properties>
+                          </component>
+                          <hspacer id="b9f00">
+                            <constraints>
+                              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                          </hspacer>
+                          <component id="16a0f" class="javax.swing.JLabel">
+                            <constraints>
+                              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                            </constraints>
+                            <properties>
+                              <text value="更多"/>
+                            </properties>
+                          </component>
+                        </children>
+                      </grid>
+                      <scrollpane id="51690">
+                        <constraints border-constraint="Center"/>
+                        <properties/>
+                        <border type="none"/>
+                        <children/>
+                      </scrollpane>
+                    </children>
+                  </grid>
+                </children>
+              </grid>
+              <grid id="df4b0" layout-manager="BorderLayout" hgap="0" vgap="0">
+                <constraints>
+                  <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties/>
+                <border type="none"/>
+                <children>
+                  <grid id="87d19" layout-manager="BorderLayout" hgap="0" vgap="0">
+                    <constraints border-constraint="Center"/>
+                    <properties>
+                      <preferredSize width="30" height="0"/>
+                    </properties>
+                    <border type="none"/>
+                    <children/>
+                  </grid>
+                </children>
+              </grid>
+            </children>
+          </grid>
+        </children>
+      </grid>
+    </children>
+  </grid>
+</form>

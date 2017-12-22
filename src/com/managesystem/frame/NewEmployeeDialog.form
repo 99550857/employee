@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.managesystem.frame.NewEmployeeDialog">
+  <grid id="cbd77" binding="contentPane" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="48" y="47" width="767" height="508"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <grid id="daf1b" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="South"/>
+        <properties>
+          <preferredSize width="0" height="50"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="b1437" class="javax.swing.JButton" binding="取消Button" default-binding="true">
+            <constraints>
+              <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="取消"/>
+            </properties>
+          </component>
+          <hspacer id="f5120">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+          </hspacer>
+          <component id="47aa2" class="javax.swing.JButton" binding="确定Button" default-binding="true">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="确定"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="30e91" binding="cneterPanel" layout-manager="GridLayoutManager" row-count="9" column-count="5" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children>
+          <component id="69b36" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="工号："/>
+            </properties>
+          </component>
+          <component id="539cc" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="部门："/>
+            </properties>
+          </component>
+          <component id="917f0" class="javax.swing.JTextField" binding="employeeIDTextField">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="1d05c" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="密码："/>
+            </properties>
+          </component>
+          <component id="31d55" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="姓名："/>
+            </properties>
+          </component>
+          <component id="86fc7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="性别："/>
+            </properties>
+          </component>
+          <component id="4398" class="javax.swing.JTextField" binding="passwordTextField">
+            <constraints>
+              <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="1103a" class="javax.swing.JTextField" binding="nameTextField">
+            <constraints>
+              <grid row="1" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="9d4d0" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="名族"/>
+            </properties>
+          </component>
+          <component id="7bc4e" class="javax.swing.JTextField" binding="nationTextField">
+            <constraints>
+              <grid row="2" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="67075" class="javax.swing.JComboBox" binding="departmentComboBox">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="efe54" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="省："/>
+            </properties>
+          </component>
+          <component id="6c556" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="市："/>
+            </properties>
+          </component>
+          <component id="a8610" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="详细地址："/>
+            </properties>
+          </component>
+          <component id="37162" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="4" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="学历："/>
+            </properties>
+          </component>
+          <component id="38835" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="职务："/>
+            </properties>
+          </component>
+          <component id="5e576" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="5" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="职称："/>
+            </properties>
+          </component>
+          <component id="5d6c7" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="婚姻状况："/>
+            </properties>
+          </component>
+          <component id="9c78" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="6" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="政治面貌："/>
+            </properties>
+          </component>
+          <component id="6bf20" class="javax.swing.JButton" binding="入职时间Button" default-binding="true">
+            <constraints>
+              <grid row="7" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="入职时间："/>
+            </properties>
+          </component>
+          <component id="2836f" class="javax.swing.JTextField" binding="dateTextField">
+            <constraints>
+              <grid row="7" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="0" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties>
+              <editable value="false"/>
+            </properties>
+          </component>
+          <component id="d30aa" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="7" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="电话："/>
+            </properties>
+          </component>
+          <component id="39a82" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="email："/>
+            </properties>
+          </component>
+          <component id="75f2" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+            <constraints>
+              <grid row="8" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="4" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="@qq.com"/>
+                <item value="@gmail.com"/>
+                <item value="@163.com"/>
+                <item value="@sina.com"/>
+                <item value="@tom.com"/>
+                <item value="@21cn.com"/>
+              </model>
+            </properties>
+          </component>
+          <component id="4756e" class="javax.swing.JTextField" binding="emailTextField">
+            <constraints>
+              <grid row="8" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="c52af" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="8" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value="头像："/>
+            </properties>
+          </component>
+          <component id="81576" class="javax.swing.JLabel" binding="avatarLabel">
+            <constraints>
+              <grid row="8" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <text value=""/>
+            </properties>
+          </component>
+          <component id="ec575" class="javax.swing.JComboBox" binding="provinceComboBox">
+            <constraints>
+              <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="aa3cc" class="javax.swing.JComboBox" binding="cityComboBox">
+            <constraints>
+              <grid row="3" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="1b9de" class="javax.swing.JTextField" binding="addressTextField">
+            <constraints>
+              <grid row="4" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="7a9d9" class="javax.swing.JTextField" binding="postTextField">
+            <constraints>
+              <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="5e386" class="javax.swing.JComboBox" binding="eduBackComboBox">
+            <constraints>
+              <grid row="4" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="学龄前"/>
+                <item value="小学"/>
+                <item value="初中"/>
+                <item value="中专"/>
+                <item value="高中"/>
+                <item value="大专"/>
+                <item value="学士"/>
+                <item value="硕士"/>
+                <item value="博士"/>
+              </model>
+            </properties>
+          </component>
+          <component id="7ee3e" class="javax.swing.JTextField" binding="tectitleTextField">
+            <constraints>
+              <grid row="5" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="5e36e" class="javax.swing.JComboBox" binding="politicalStatusComboBox">
+            <constraints>
+              <grid row="6" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="群众"/>
+                <item value="团员"/>
+                <item value="党员"/>
+              </model>
+            </properties>
+          </component>
+          <component id="af6ba" class="javax.swing.JComboBox" binding="maritalStatusComboBox">
+            <constraints>
+              <grid row="6" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="未婚"/>
+                <item value="已婚"/>
+              </model>
+            </properties>
+          </component>
+          <component id="ef33f" class="javax.swing.JTextField" binding="phoneTextField">
+            <constraints>
+              <grid row="7" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                <preferred-size width="150" height="-1"/>
+              </grid>
+            </constraints>
+            <properties/>
+          </component>
+          <component id="3fa8d" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+            <constraints>
+              <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <model>
+                <item value="男"/>
+                <item value="女"/>
+              </model>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="70513" layout-manager="GridBagLayout">
+        <constraints border-constraint="West"/>
+        <properties>
+          <preferredSize width="20" height="0"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="64902" layout-manager="GridBagLayout">
+        <constraints border-constraint="East"/>
+        <properties>
+          <preferredSize width="20" height="0"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="com.managesystem.frame.UserFrame">
+  <grid id="27dc6" binding="mainPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+    <constraints>
+      <xy x="20" y="20" width="500" height="400"/>
+    </constraints>
+    <properties>
+      <background color="-657929"/>
+    </properties>
+    <border type="none"/>
+    <children>
+      <grid id="d377f" binding="topPanel" layout-manager="BorderLayout" hgap="0" vgap="0">
+        <constraints border-constraint="North"/>
+        <properties>
+          <background color="-13989989"/>
+          <preferredSize width="0" height="130"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="df6d4" binding="leftPanel" layout-manager="FlowLayout" hgap="20" vgap="20" flow-align="0">
+        <constraints border-constraint="West"/>
+        <properties>
+          <background color="-4677205"/>
+          <preferredSize width="120" height="24"/>
+        </properties>
+        <border type="none"/>
+        <children/>
+      </grid>
+      <grid id="576af" binding="centerPanel" layout-manager="CardLayout" hgap="0" vgap="0">
+        <constraints border-constraint="Center"/>
+        <properties/>
+        <border type="none"/>
+        <children/>
+      </grid>
+    </children>
+  </grid>
+</form>
