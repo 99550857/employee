@@ -16,7 +16,7 @@ public class InformDAOTest {
     @Test
     public void insertInform() throws Exception {
         for (int i = 0; i < 5; i++) {
-            Inform inform = new Inform("1","111","上午adsasd门会议","请所有人准时到，地点：*******","赵玲",new Timestamp(System.currentTimeMillis()));
+            Inform inform = new Inform("1","111","上   午adsasd门会议","请所有人准时到，地点：*******","赵玲",new Timestamp(System.currentTimeMillis()));
             System.out.println(informDAO.InsertInform(inform));
         }
     }
