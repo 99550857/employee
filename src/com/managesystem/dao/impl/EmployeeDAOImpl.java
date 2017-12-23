@@ -159,4 +159,16 @@ public class EmployeeDAOImpl implements EmployeeDAO {
         jdbcUtil.closeAll();
         return result;
     }
+
+    @Override
+    public String getDepartmentname(String id) throws SQLException {
+        String sql="SELECT * FROM t_department WHERE id=?";
+        Map<String,Object> map = jdbcUtil.executeQuerySingle(sql,new Object[]{id});
+        if(map.size()!=0){
+            return map.get("name").toString();
+        }
+        return null;
+    }
+
+
 }

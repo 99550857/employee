@@ -67,4 +67,10 @@ public interface UserService {
     List<String> getLogInAccount();
 
     int InsertInform(Inform inform) ;
+
+    List<Inform> getAllInform() throws SQLException;
+
+    List<Inform> getPartInform(int departmentid) throws SQLException;
+
+    String  getDepartmentname(String id) ;
 }

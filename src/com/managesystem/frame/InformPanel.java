@@ -1,17 +1,19 @@
 package com.managesystem.frame;
 
 import com.managesystem.model.Admin;
+import com.managesystem.model.Employee;
 import com.managesystem.model.Inform;
 import com.managesystem.service.UserService;
 import com.managesystem.service.impl.UserServiceImpl;
-import javafx.scene.input.DataFormat;
+import com.managesystem.ui.InformJPanel;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
-import java.sql.Date;
+import java.sql.SQLException;
 import java.sql.Timestamp;
-import java.time.LocalDateTime;
+import java.util.*;
+import java.util.List;
 
 /**
  * Created by 99550 on 2017/12/22.
@@ -28,29 +30,56 @@ public class InformPanel  extends JPanel{
     private JLabel promptLabel;
     private JPanel modifyCard;
     private JPanel cardPanel;
+    private JPanel allInformPanel;
+    private JPanel departmentInfoPanel;
+    private JPanel personalPanel;
+    private JLabel titleLabel;
     private Timestamp timestamp;
-    private Admin admin;
+    private Admin admin=null;
+    private Employee employee=null;
+    private CardLayout card = new CardLayout();
     private UserService userService = new UserServiceImpl();
-    public InformPanel(Admin admin) {
+    private List<String> powerList =new ArrayList<>();
+    public InformPanel(Admin admin,List<String> list) {
+        setPreferredSize(new Dimension(1500,800));
+        this.powerList=list;
         this.admin = admin;
         add(mainPanel);
-        CardLayout card = new CardLayout();
-        cardPanel.setLayout(card);
-        cardPanel.add(sendCard,"card1");
-        cardPanel.add(modifyCard,"card2");
+        init();
+    }
+    public InformPanel(Employee employee, List<String> list) {
+        this.powerList=list;
+        this.employee = employee;
+        add(mainPanel);
+        init();
         sendInform();
-        readLabel.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                card.show(cardPanel,"card1");
-            }
-        });
-        departmentInform.addMouseListener(new MouseAdapter() {
-            @Override
-            public void mouseClicked(MouseEvent e) {
-                card.show(cardPanel,"card2");
-            }
-        });
+        modifyInform();
+    }
+    public void init(){
+        cardPanel.setLayout(card);
+        if(powerList.contains("增加通知")) {
+            cardPanel.add(sendCard,"card1");
+            departmentInform.setVisible(true);
+            departmentInform.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    card.show(cardPanel,"card1");
+                }
+            });
+            sendInform();
+        }
+
+        if(powerList.contains("查看通知")){
+            cardPanel.add(modifyCard,"card2");
+            readLabel.setVisible(true);
+            readLabel.addMouseListener(new MouseAdapter() {
+                @Override
+                public void mouseClicked(MouseEvent e) {
+                    card.show(cardPanel,"card2");
+                }
+            });
+            modifyInform();
+        }
     }
     public void sendInform(){
         String name = userService.getInfo(admin.getAccount()).getName();
@@ -86,11 +115,34 @@ public class InformPanel  extends JPanel{
         });
     }
     public void modifyInform(){
+        java.util.List<Inform> informListAll = null;
+        try {
+             informListAll = userService.getAllInform();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        List<Inform> allPart = getPart(informListAll);
+        for (Inform inform:allPart) {
+            allInformPanel.add(new InformJPanel(800,30,inform));
+        }
+    }
 
+
+    public List<Inform> getPart(List<Inform> list){
+        Collections.reverse(list);
+        List<Inform> list1 = new ArrayList<>();
+        for (Inform inform:list ) {
+            if(list1.size()<8){
+                list1.add(inform);
+            }else {
+                break;
+            }
+        }
+        return list1;
     }
     public static void main(String[] args) {
         JFrame frame = new JFrame("LoginFrame");
-        frame.setContentPane(new InformPanel(new Admin ("111","111")).mainPanel);
+        frame.setContentPane(new InformPanel(new Admin ("111","111"),new ArrayList<String>()));
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.pack();

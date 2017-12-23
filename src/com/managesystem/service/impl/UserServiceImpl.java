@@ -46,7 +46,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
-
+    /**
+     * 权限获取
+     * @param account
+     * @return
+     */
     @Override
     public Map<String, List<String>> getPower(String account) {
         try {
@@ -57,6 +61,12 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * 登录
+     * @param account
+     * @param password
+     * @return
+     */
     @Override
     public Map<String, Object> login(String account, String password) {
         Map<String, Object> map = new HashMap<>();
@@ -95,6 +105,10 @@ public class UserServiceImpl implements UserService {
         return map;
     }
 
+    /**
+     * 获取所有员工信息
+     * @return
+     */
     @Override
     public List<EmployeeInfo> getAll() {
         try {
@@ -105,6 +119,10 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     *获取所有部门
+     * @return
+     */
     @Override
     public List<Department> getAllDepartment() {
         try {
@@ -115,6 +133,10 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * 获取所有员工地区
+     * @return
+     */
     @Override
     public Set<String> getAllArea() {
         try {
@@ -125,6 +147,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * 根据部门名称获取编号
+     * @param departmentname
+     * @return
+     */
     @Override
     public String getDepartmentid(String departmentname) {
 
@@ -136,6 +163,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * 分组
+     * @param condition
+     * @return
+     */
     @Override
     public List<EmployeeInfo> queryBy(String condition) {
         try {
@@ -146,6 +178,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * 搜索
+     * @param keyword
+     * @return
+     */
     @Override
     public List<EmployeeInfo> queryLike(String keyword) {
         try {
@@ -156,6 +193,11 @@ public class UserServiceImpl implements UserService {
         return null;
     }
 
+    /**
+     * 批量删除
+     * @param list
+     * @return
+     */
     @Override
     public int[] batchDelete(List<String> list) {
         try {
@@ -166,6 +208,10 @@ public class UserServiceImpl implements UserService {
         return new int[0];
     }
 
+    /**
+     * 获取曾经登陆过人员的账号
+     * @return
+     */
     @Override
     public List<String> getLogInAccount() {
         try {
@@ -176,6 +222,11 @@ public class UserServiceImpl implements UserService {
         return new ArrayList<>();
     }
 
+    /**
+     * 将公告信息存入数据库
+     * @param inform
+     * @return
+     */
     @Override
     public int InsertInform(Inform inform) {
         try {
@@ -185,4 +236,30 @@ public class UserServiceImpl implements UserService {
         }
         return 0;
     }
+
+    @Override
+    public List<Inform> getAllInform() {
+        try {
+            return informDAO.getAllInform();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    @Override
+    public List<Inform> getPartInform(int departmentid) throws SQLException {
+        return getPartInform(departmentid);
+    }
+
+    @Override
+    public String getDepartmentname(String id) {
+        try {
+            return employeeDAO.getDepartmentname(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
 }

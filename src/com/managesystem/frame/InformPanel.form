@@ -32,6 +32,7 @@
               <font size="16"/>
               <preferredSize width="120" height="17"/>
               <text value="通知查看"/>
+              <visible value="false"/>
             </properties>
           </component>
           <component id="309df" class="javax.swing.JLabel" binding="departmentInform">
@@ -40,6 +41,7 @@
               <font size="16"/>
               <preferredSize width="120" height="17"/>
               <text value="通知发布"/>
+              <visible value="false"/>
             </properties>
           </component>
         </children>
@@ -53,7 +55,7 @@
         </properties>
         <border type="none"/>
         <children>
-          <component id="ee9d5" class="javax.swing.JLabel">
+          <component id="ee9d5" class="javax.swing.JLabel" binding="titleLabel">
             <constraints>
               <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
@@ -76,7 +78,7 @@
             </constraints>
             <properties>
               <opaque value="true"/>
-              <visible value="false"/>
+              <visible value="true"/>
             </properties>
             <border type="none"/>
             <children>
@@ -261,7 +263,8 @@
               <card name="Card2"/>
             </constraints>
             <properties>
-              <visible value="true"/>
+              <background color="-657929"/>
+              <visible value="false"/>
             </properties>
             <border type="none"/>
             <children>
@@ -282,7 +285,9 @@
                       <grid id="baade" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints border-constraint="North"/>
-                        <properties/>
+                        <properties>
+                          <background color="-657929"/>
+                        </properties>
                         <border type="none"/>
                         <children>
                           <component id="e1564" class="javax.swing.JLabel">
@@ -308,14 +313,21 @@
                           </component>
                         </children>
                       </grid>
-                      <scrollpane id="145d3">
+                      <scrollpane id="897b7">
                         <constraints border-constraint="Center"/>
-                        <properties/>
+                        <properties>
+                          <horizontalScrollBarPolicy value="30"/>
+                          <preferredSize width="500" height="10"/>
+                          <verticalScrollBarPolicy value="20"/>
+                        </properties>
                         <border type="none"/>
                         <children>
-                          <grid id="ac913" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                          <grid id="5652f" binding="allInformPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="0">
                             <constraints/>
-                            <properties/>
+                            <properties>
+                              <background color="-657929"/>
+                              <preferredSize width="450" height="10"/>
+                            </properties>
                             <border type="none"/>
                             <children/>
                           </grid>
@@ -335,6 +347,7 @@
                   <grid id="aee99" layout-manager="BorderLayout" hgap="0" vgap="0">
                     <constraints border-constraint="Center"/>
                     <properties>
+                      <background color="-657929"/>
                       <foreground color="-657929"/>
                       <preferredSize width="50" height="0"/>
                     </properties>
@@ -354,6 +367,7 @@
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="Center"/>
                     <properties>
+                      <background color="-657929"/>
                       <preferredSize width="24" height="30"/>
                     </properties>
                     <border type="none"/>
@@ -372,6 +386,7 @@
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="Center"/>
                     <properties>
+                      <background color="-657929"/>
                       <preferredSize width="24" height="30"/>
                     </properties>
                     <border type="none"/>
@@ -390,6 +405,7 @@
                     <margin top="0" left="0" bottom="0" right="0"/>
                     <constraints border-constraint="Center"/>
                     <properties>
+                      <background color="-657929"/>
                       <preferredSize width="50" height="24"/>
                     </properties>
                     <border type="none"/>
@@ -432,7 +448,9 @@
                       <grid id="7bc78" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints border-constraint="North"/>
-                        <properties/>
+                        <properties>
+                          <background color="-657929"/>
+                        </properties>
                         <border type="none"/>
                         <children>
                           <component id="42d54" class="javax.swing.JLabel">
@@ -460,13 +478,18 @@
                       </grid>
                       <scrollpane id="75c78">
                         <constraints border-constraint="Center"/>
-                        <properties/>
+                        <properties>
+                          <background color="-657929"/>
+                          <verticalScrollBarPolicy value="20"/>
+                        </properties>
                         <border type="none"/>
                         <children>
-                          <grid id="e212b" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
-                            <margin top="0" left="0" bottom="0" right="0"/>
+                          <grid id="e212b" binding="departmentInfoPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
                             <constraints/>
-                            <properties/>
+                            <properties>
+                              <background color="-657929"/>
+                              <preferredSize width="200" height="10"/>
+                            </properties>
                             <border type="none"/>
                             <children/>
                           </grid>
@@ -493,7 +516,9 @@
                       <grid id="b4d0d" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
                         <margin top="0" left="0" bottom="0" right="0"/>
                         <constraints border-constraint="North"/>
-                        <properties/>
+                        <properties>
+                          <background color="-657929"/>
+                        </properties>
                         <border type="none"/>
                         <children>
                           <component id="da36c" class="javax.swing.JLabel">
@@ -521,9 +546,21 @@
                       </grid>
                       <scrollpane id="51690">
                         <constraints border-constraint="Center"/>
-                        <properties/>
+                        <properties>
+                          <background color="-657929"/>
+                        </properties>
                         <border type="none"/>
-                        <children/>
+                        <children>
+                          <grid id="c6a0b" binding="personalPanel" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+                            <constraints/>
+                            <properties>
+                              <background color="-657929"/>
+                              <preferredSize width="200" height="10"/>
+                            </properties>
+                            <border type="none"/>
+                            <children/>
+                          </grid>
+                        </children>
                       </scrollpane>
                     </children>
                   </grid>
@@ -539,6 +576,7 @@
                   <grid id="87d19" layout-manager="BorderLayout" hgap="0" vgap="0">
                     <constraints border-constraint="Center"/>
                     <properties>
+                      <background color="-657929"/>
                       <preferredSize width="30" height="0"/>
                     </properties>
                     <border type="none"/>
