@@ -52,8 +52,7 @@ public class InformJPanel extends JPanel{
         addMouseListener(new MouseAdapter() {
             @Override
             public void mouseClicked(MouseEvent e) {
-                //new  InformContentDialog(inform,deaprtment);
-                new NewEmployeeDialog();
+                new  InformContentDialog(inform,deaprtment);
             }
         });
     }

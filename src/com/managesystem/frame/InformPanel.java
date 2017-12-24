@@ -14,7 +14,7 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.*;
 import java.util.List;
-
+import com.managesystem.model.*;
 /**
  * Created by 99550 on 2017/12/22.
  */
@@ -37,48 +37,51 @@ public class InformPanel  extends JPanel{
     private Timestamp timestamp;
     private Admin admin=null;
     private Employee employee=null;
+    private EmployeeInfo employeeInfo=null;
     private CardLayout card = new CardLayout();
     private UserService userService = new UserServiceImpl();
     private List<String> powerList =new ArrayList<>();
+
     public InformPanel(Admin admin,List<String> list) {
         setPreferredSize(new Dimension(1500,800));
         this.powerList=list;
         this.admin = admin;
+        employeeInfo = userService.getInfo(admin.getAccount());
         add(mainPanel);
         init();
     }
     public InformPanel(Employee employee, List<String> list) {
         this.powerList=list;
         this.employee = employee;
+        employeeInfo = userService.getInfo(employee.getEmployeeid());
         add(mainPanel);
         init();
-        sendInform();
-        modifyInform();
     }
     public void init(){
         cardPanel.setLayout(card);
-        if(powerList.contains("增加通知")) {
-            cardPanel.add(sendCard,"card1");
-            departmentInform.setVisible(true);
-            departmentInform.addMouseListener(new MouseAdapter() {
+        if(powerList.contains("查看通知")){
+            cardPanel.add(modifyCard,"card1");
+            readLabel.setVisible(true);
+            labelListener(readLabel);
+            readLabel.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     card.show(cardPanel,"card1");
                 }
             });
-            sendInform();
+            modifyInform();
         }
-
-        if(powerList.contains("查看通知")){
-            cardPanel.add(modifyCard,"card2");
-            readLabel.setVisible(true);
-            readLabel.addMouseListener(new MouseAdapter() {
+        if(powerList.contains("增加通知")) {
+            cardPanel.add(sendCard,"card2");
+            departmentInform.setVisible(true);
+            labelListener(departmentInform);
+            departmentInform.addMouseListener(new MouseAdapter() {
                 @Override
                 public void mouseClicked(MouseEvent e) {
                     card.show(cardPanel,"card2");
                 }
             });
-            modifyInform();
+            sendInform();
         }
     }
     public void sendInform(){
@@ -125,8 +128,33 @@ public class InformPanel  extends JPanel{
         for (Inform inform:allPart) {
             allInformPanel.add(new InformJPanel(800,30,inform));
         }
-    }
+        List<Inform> departmentList = null;
 
+            try {
+                departmentList = userService.getPartInform(Integer.valueOf(employeeInfo.getDepartmentid()));
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+
+        System.out.println();
+        List<Inform> departmentPart = getPart(departmentList);
+        for (Inform inform:departmentPart) {
+            departmentInfoPanel.add(new InformJPanel(400,30,inform));
+        }
+    }
+    public void labelListener(JLabel label){
+        label.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseEntered(MouseEvent e) {
+                label.setBackground(new Color(241,251,244));
+            }
+
+            @Override
+            public void mouseExited(MouseEvent e) {
+                label.setBackground(new Color(226,247,118));
+            }
+        });
+    }
 
     public List<Inform> getPart(List<Inform> list){
         Collections.reverse(list);

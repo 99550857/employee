@@ -66,6 +66,12 @@ public class EmployeePanel extends JPanel{
 
         if(function.contains(s[0])){
             addEmployeeButton.setVisible(true);
+            addEmployeeButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    new NewEmployeeDialog().setModalityType(Dialog.ModalityType.APPLICATION_MODAL);
+                }
+            });
         }
         if (function.contains(s[1])){
             updateButton.setVisible(true);

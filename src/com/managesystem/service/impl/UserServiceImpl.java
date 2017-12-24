@@ -248,8 +248,13 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<Inform> getPartInform(int departmentid) throws SQLException {
-        return getPartInform(departmentid);
+    public List<Inform> getPartInform(int departmentid)  {
+        try {
+            return informDAO.getPartInform(departmentid);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     @Override
