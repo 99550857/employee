@@ -5,6 +5,7 @@ import utils.DialogDatePicker;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import com.managesystem.model.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -45,14 +46,10 @@ public class NewEmployeeDialog extends JDialog {
     private String[] jiangsuCity = {"徐州","连云港","南京"};
     private String[] zhejiangCity = {"杭州","建德","温州"};
     private String[] anhuiCity = {"芜湖","蚌埠","合肥"};
-    private Map<String,String[]> provinceMap=new HashMap<>();
     private String dateString;
-
     public NewEmployeeDialog() {
-        this.setModal(true);
-        setVisible(true);
+        setModal(true);
         init();
-
         setSize(700, 700);
         setLocationRelativeTo(null);
         setContentPane(contentPane);
@@ -97,6 +94,14 @@ public class NewEmployeeDialog extends JDialog {
                 dateTextField.setText(dateString);
             }
         });
+        确定Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeInfo employeeInfo = new EmployeeInfo();
+            }
+        });
+        setVisible(true);
+        pack();
     }
     public void init(){
         provinceDCB = new DefaultComboBoxModel();

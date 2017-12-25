@@ -8,6 +8,10 @@ import javax.swing.*;
 public class MessagePanel extends JPanel{
     private JPanel mainPanel;
     private JPanel leftPanel;
+    private JTextField textField1;
+    private JPanel leftCardPanel;
+    private JPanel treePanel;
+    private JPanel listPanel;
 
 
     public MessagePanel() {

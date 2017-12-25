@@ -15,11 +15,9 @@ public class InformContentDialog extends JDialog {
 
     public InformContentDialog(Inform inform,String name) {
         add(contentPane);
-        pack();
-        setVisible(true);
+        setModal(true);
         setSize(500, 300);
         setLocationRelativeTo(null);
-        setModal(true);
         label1.setText(name + " "+ inform.getName() + " 于 "+inform.getDate()+"  发布");
         titleLabel.setText(inform.getTitle());
         textArea1.setText(inform.getContent());
@@ -29,5 +27,7 @@ public class InformContentDialog extends JDialog {
                 InformContentDialog.this.dispose();
             }
         });
+        setVisible(true);
+        pack();
     }
 }

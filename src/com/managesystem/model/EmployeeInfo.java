@@ -26,6 +26,9 @@ public class EmployeeInfo {
     private String email;
     private byte []avatar;
 
+    public EmployeeInfo() {
+    }
+
     public EmployeeInfo(String employeeid, String departmentid, String name, String gender, String nation, String province, String municipality, String address, String eduback, String post, String tectitle, String marital_status, String political_status, Date entry_time, String phone, String email, byte[] avatar) {
         this.employeeid = employeeid;
         this.departmentid = departmentid;

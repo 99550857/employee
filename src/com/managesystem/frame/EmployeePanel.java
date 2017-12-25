@@ -3,9 +3,15 @@ package com.managesystem.frame;
 import com.managesystem.service.UserService;
 import com.managesystem.service.impl.UserServiceImpl;
 import com.managesystem.model.*;
+import com.managesystem.ui.CWCheckBoxRenderer;
+import com.managesystem.ui.CheckBoxCellEditor;
+
 import javax.swing.*;
+import javax.swing.event.TableModelEvent;
+import javax.swing.event.TableModelListener;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableColumnModel;
 import java.awt.*;
 
 import java.awt.event.ActionEvent;
@@ -37,6 +43,7 @@ public class EmployeePanel extends JPanel{
     private JButton searchButton;
     private JPanel bottomPanel;
     private JScrollPane scrollPane;
+    private JButton 批量导入Button;
     private List<String> function;
     private DefaultTableModel dtm;
     private String []s={"增加员工","删除员工","修改员工","查看员工"};
@@ -46,6 +53,7 @@ public class EmployeePanel extends JPanel{
     private DefaultComboBoxModel deb2;
     private String address= null;
     private StringBuffer condition = new StringBuffer();
+    private List<Integer> rows = new ArrayList<>();
     public EmployeePanel(java.util.List<String> function) {
         this.function=function;
         setLayout(new BorderLayout());
@@ -171,12 +179,16 @@ public class EmployeePanel extends JPanel{
     }
 
     public void showTable(){
+
+
         dtm = new DefaultTableModel();
         users = new ArrayList<>();
         users = userService.getAll();
-        String []title={"工号","部门编号","姓名","性别","名族","详细地址","学历","职务","入职时间","电话","邮箱"};
+        String []title={" ","工号","部门编号","姓名","性别","名族","详细地址","学历","职务","入职时间","电话","邮箱"};
         dtm.setColumnIdentifiers(title);
         table1.setModel(dtm);
+        TableColumnModel tcm= table1.getColumnModel();
+        tcm.getColumn(0).setCellEditor(new DefaultCellEditor(new JCheckBox()));
         DefaultTableCellRenderer r = new DefaultTableCellRenderer();
         // 设置水平方向居中
         r.setHorizontalAlignment(JLabel.CENTER);
@@ -186,22 +198,39 @@ public class EmployeePanel extends JPanel{
         r1.setHorizontalAlignment(JLabel.CENTER);
         r1.setBackground(Color.LIGHT_GRAY);
         table1.getTableHeader().setDefaultRenderer(r1);
-        String []content=new String[11];
+        table1.getColumnModel().getColumn(0).setCellEditor(new CheckBoxCellEditor());
+        table1.getColumnModel().getColumn(0).setCellRenderer(new CWCheckBoxRenderer());
+        Object []content=new Object[12];
         for (EmployeeInfo e:users) {
-            content[0] = e.getEmployeeid();
-            content[1] = e.getDepartmentid();
-            content[2] = e.getName();
-            content[3] = e.getGender();
-            content[4] = e.getNation();
-            content[5] = e.getAddress();
-            content[6] = e.getEduback();
-            content[7] = e.getPost();
-            content[8] = e.getEntry_time().toString();
-            content[9] = e.getPhone();
-            content[10] = e.getEmail();
+            content[0] = new Boolean(false);
+            content[1] = e.getEmployeeid();
+            content[2] = e.getDepartmentid();
+            content[3] = e.getName();
+            content[4] = e.getGender();
+            content[5] = e.getNation();
+            content[6] = e.getAddress();
+            content[7] = e.getEduback();
+            content[8] = e.getPost();
+            content[9] = e.getEntry_time().toString();
+            content[10] = e.getPhone();
+            content[11] = e.getEmail();
             dtm.addRow(content);
         }
         panel1.revalidate();
+        table1.getModel().addTableModelListener(new TableModelListener() {
+            @Override
+            public void tableChanged(TableModelEvent e) {
+                int row = e.getFirstRow();
+                int col = e.getColumn();
+                if (row < table1.getColumnCount()) {
+                    if (dtm.getValueAt(row, col).toString() == "true") {
+                        rows.add(row);
+                    } else {
+                        rows.remove(rows.indexOf(row));
+                    }
+                }
+            }
+        });
     }
 
     public void updateModel(){
@@ -213,10 +242,11 @@ public class EmployeePanel extends JPanel{
         for(EmployeeInfo e : users){
             add(e);
         }
+        rows.removeAll(rows);
     }
 
     public void add(EmployeeInfo employeeInfo){
-        Object []rowdata = {employeeInfo.getEmployeeid(),employeeInfo.getDepartmentid(),employeeInfo.getName(),
+        Object []rowdata = {new Boolean(false),employeeInfo.getEmployeeid(),employeeInfo.getDepartmentid(),employeeInfo.getName(),
                             employeeInfo.getGender(),employeeInfo.getName(),employeeInfo.getAddress(),
                             employeeInfo.getEduback(),employeeInfo.getPost(),employeeInfo.getEntry_time(),
                             employeeInfo.getPhone(),employeeInfo.getEmail()

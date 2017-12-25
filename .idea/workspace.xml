@@ -1,49 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0f9b6a6f-47ab-4894-98e2-9b8cae2355ec" name="Default" comment="Inform manage">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/EmployeeDAO.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/EmployeeDAO.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/InformDAO.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/InformDAO.class" />
+    <list default="true" id="0f9b6a6f-47ab-4894-98e2-9b8cae2355ec" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/default.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/managesystem/ui/CWCheckBoxRenderer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/managesystem/ui/CheckBoxCellEditor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/ExcelUtil.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/impl/EmployeeDAOImpl.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/impl/EmployeeDAOImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/impl/InformImpl.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/impl/InformImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$1.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$2.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$3.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$1.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$2.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$3.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$4.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/InformPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/LoginFrame$1.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/LoginFrame$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/LoginFrame$2.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/LoginFrame$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/LoginFrame.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/LoginFrame.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog$1.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog$2.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog$3.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog$3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/NewEmployeeDialog.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/UserFrame$1.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/UserFrame$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/UserFrame.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/UserFrame.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/UserService.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/UserService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/impl/UserServiceImpl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/employee/com/managesystem/dao/InformDAOTest.class" afterPath="$PROJECT_DIR$/out/test/employee/com/managesystem/dao/InformDAOTest.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/test/employee/com/managesystem/service/UserServiceTest.class" afterPath="$PROJECT_DIR$/out/test/employee/com/managesystem/service/UserServiceTest.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/model/EmployeeInfo.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/model/EmployeeInfo.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java" afterPath="$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/UserFrame.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/UserFrame.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/managesystem/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.form" afterPath="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.form" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/model/EmployeeInfo.java" afterPath="$PROJECT_DIR$/src/com/managesystem/model/EmployeeInfo.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.java" afterPath="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/ui/InformJPanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/ui/InformJPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/managesystem/dao/InformDAOTest.java" afterPath="$PROJECT_DIR$/test/com/managesystem/dao/InformDAOTest.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/com/managesystem/service/UserServiceTest.java" afterPath="$PROJECT_DIR$/test/com/managesystem/service/UserServiceTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,51 +40,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="InformPanel.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="750">
-              <caret line="44" column="52" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-              <folding>
-                <element signature="e#2253#2254#0" expanded="false" />
-                <element signature="e#2321#2322#0" expanded="false" />
-                <element signature="e#2703#2704#0" expanded="false" />
-                <element signature="e#2771#2772#0" expanded="false" />
-                <element signature="class#3499:4243" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginFrame.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-50">
-              <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="EmployeePanel.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="850">
-              <caret line="47" column="56" lean-forward="false" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="method#showTable#0;class#EmployeePanel#0" expanded="false" />
-                <element signature="method#add#0;class#EmployeePanel#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginFrame.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.form">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="4019">
+              <caret line="230" column="17" lean-forward="false" selection-start-line="230" selection-start-column="17" selection-end-line="230" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -112,10 +53,12 @@
       <file leaf-file-name="NewEmployeeDialog.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1075">
-              <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="70">
+              <caret line="88" column="54" lean-forward="true" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#3487#3488#0" expanded="true" />
+                <element signature="e#3565#3566#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -123,39 +66,21 @@
       </file>
       <file leaf-file-name="NewEmployeeDialog.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.form">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
+          <provider selected="true" editor-type-id="ui-designer">
+            <state />
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserFrame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/UserFrame.java">
+      <file leaf-file-name="MessagePanel.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
-              <caret line="83" column="55" lean-forward="false" selection-start-line="83" selection-start-column="55" selection-end-line="83" selection-end-column="55" />
+            <state relative-caret-position="375">
+              <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
               <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#3544#4131#0" expanded="false" />
-                <element signature="e#4130#4131#0" expanded="false" />
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#388#389#0" expanded="true" />
               </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserFrame.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/UserFrame.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InformPanel.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form">
-          <provider selected="true" editor-type-id="ui-designer">
-            <state />
           </provider>
         </entry>
       </file>
@@ -194,18 +119,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/managesystem/frame/Epanel.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/service/UserServiceTest.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.form" />
-        <option value="$PROJECT_DIR$/src/utils/JTextFieldHintListener.java" />
-        <option value="$PROJECT_DIR$/src/utils/JPasswordFieldHintListener.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/NewEl.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployee.java" />
         <option value="$PROJECT_DIR$/src/utils/DialogDatePicker.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/model/GongGao.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/model/Admin.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/model/Employee.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/model/EmployeeInfo.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/model/Department.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/ui/TranslucenceJPanel.java" />
         <option value="$PROJECT_DIR$/src/com/miaodiyun/httpApiDemo/IndustrySMS.java" />
@@ -225,26 +144,32 @@
         <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformJLabel.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformPanel.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/dao/EmployeeDAO.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/service/UserService.java" />
         <option value="$PROJECT_DIR$/test/com/managesystem/dao/InformDAOTest.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformJPanel.form" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/UserFrame.form" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeFrame.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.form" />
         <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.form" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.java" />
         <option value="$PROJECT_DIR$/test/com/managesystem/service/UserServiceTest.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/service/impl/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformJPanel.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java" />
-        <option value="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/UserFrame.java" />
         <option value="$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/ui/ChceckBoxCellEditor.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/ui/CheckBoxCellEditor.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/ui/CWCheckBoxRenderer.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.form" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/model/EmployeeInfo.java" />
+        <option value="$PROJECT_DIR$/src/utils/ExcelUtil.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" />
+        <option value="$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java" />
       </list>
     </option>
   </component>
@@ -255,10 +180,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="20" />
-    <option name="y" value="63" />
-    <option name="width" value="1796" />
-    <option name="height" value="994" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -276,9 +201,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -301,11 +225,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managesystem" />
+              <option name="myItemId" value="WebContent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -319,15 +239,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
+              <option name="myItemId" value="WebContent" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="managesystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="dao" />
+              <option name="myItemId" value="META-INF" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -360,6 +276,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -428,10 +362,6 @@
               <option name="myItemId" value="managesystem" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -455,37 +385,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="service" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="impl" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="employee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="employee" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="managesystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
+              <option name="myItemId" value="frame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -513,6 +413,40 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="frame" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="NewEmployeeDialog" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="employee" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="managesystem" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="frame" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MessagePanel" />
+              <option name="myItemType" value="com.intellij.uiDesigner.projectView.FormNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
@@ -573,6 +507,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -584,7 +519,7 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="315" />
     <property name="UI_DESIGNER_EDITOR_MODE.PaletteManager.WIDTH" value="156" />
   </component>
@@ -594,17 +529,17 @@
       <recent name="com.managesystem.dao" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="utils" />
       <recent name="com.managesystem.dao.impl" />
       <recent name="com.managesystem.dao" />
       <recent name="com.managesystem.model" />
-      <recent name="utils" />
     </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\employee\src\jar" />
       <recent name="D:\employee\src\img" />
+      <recent name="D:\employee\src\jar" />
       <recent name="D:\employee" />
       <recent name="D:\employee\src" />
     </key>
@@ -624,26 +559,6 @@
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="true" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="employee" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="InformPanel" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.managesystem.frame.NewEmployeeDialog" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.managesystem.frame.InformPanel" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <module name="employee" />
@@ -714,6 +629,26 @@
       </option>
       <envs />
       <patterns />
+      <method />
+    </configuration>
+    <configuration default="false" name="ExcelUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="utils.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="utils.ExcelUtil" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="employee" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -1098,18 +1033,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.LoginFrame" />
-      <item index="1" class="java.lang.String" itemvalue="Application.InformPanel" />
-      <item index="2" class="java.lang.String" itemvalue="Application.NewEmployeeDialog" />
-      <item index="3" class="java.lang.String" itemvalue="Application.InformContentDialog" />
-      <item index="4" class="java.lang.String" itemvalue="JUnit.UserServiceTest.getPartInform" />
+      <item index="1" class="java.lang.String" itemvalue="Application.NewEmployeeDialog" />
+      <item index="2" class="java.lang.String" itemvalue="Application.InformContentDialog" />
+      <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceTest.getPartInform" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ExcelUtil" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.LoginFrame" />
-        <item index="1" class="java.lang.String" itemvalue="Application.NewEmployeeDialog" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.UserServiceTest.getPartInform" />
-        <item index="3" class="java.lang.String" itemvalue="Application.InformContentDialog" />
-        <item index="4" class="java.lang.String" itemvalue="Application.InformPanel" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ExcelUtil" />
+        <item index="2" class="java.lang.String" itemvalue="Application.NewEmployeeDialog" />
+        <item index="3" class="java.lang.String" itemvalue="JUnit.UserServiceTest.getPartInform" />
+        <item index="4" class="java.lang.String" itemvalue="Application.InformContentDialog" />
       </list>
     </recent_temporary>
   </component>
@@ -1129,7 +1064,11 @@
       <workItem from="1513840781893" duration="14066000" />
       <workItem from="1513914305667" duration="27787000" />
       <workItem from="1514008782512" duration="22463000" />
-      <workItem from="1514087743811" duration="110000" />
+      <workItem from="1514087743811" duration="5787000" />
+      <workItem from="1514102109674" duration="8951000" />
+      <workItem from="1514117827943" duration="1332000" />
+      <workItem from="1514119223941" duration="1803000" />
+      <workItem from="1514159699451" duration="1146000" />
     </task>
     <task id="LOCAL-00001" summary="add new changes">
       <created>1513936799006</created>
@@ -1159,7 +1098,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514045215108</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="modify inform manage">
+      <created>1514087894001</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1514087894001</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1195,10 +1141,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="87818000" />
+    <option name="totallyTimeSpent" value="106727000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="20" y="63" width="1796" height="994" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1209,20 +1155,21 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32009345" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3028846" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23988764" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22239584" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Compute Code Lines" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.067307696" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1243,7 +1190,8 @@
     <MESSAGE value="test" />
     <MESSAGE value="test1" />
     <MESSAGE value="Inform manage" />
-    <option name="LAST_COMMIT_MESSAGE" value="Inform manage" />
+    <MESSAGE value="modify inform manage" />
+    <option name="LAST_COMMIT_MESSAGE" value="modify inform manage" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1256,119 +1204,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_45/src.zip!/javax/swing/JPasswordField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5376">
-          <caret line="317" column="9" lean-forward="true" selection-start-line="317" selection-start-column="9" selection-end-line="317" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEl.form" />
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEl.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployee.form" />
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployee.java" />
-    <entry file="file://$PROJECT_DIR$/src/utils/JTextFieldHintListener.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="13" column="36" lean-forward="false" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/utils/DialogDatePicker.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/model/GongGao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="5" column="20" lean-forward="false" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/model/Employee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/AttendancePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
-          <caret line="6" column="3" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/miaodiyun/httpApiDemo/IndustryEmailSMS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/miaodiyun/httpApiDemo/IndustrySMS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
-          <caret line="5" column="3" lean-forward="true" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/impl/AdminDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/AdminDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="8" column="17" lean-forward="false" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/impl/UserDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="537">
-          <caret line="97" column="26" lean-forward="false" selection-start-line="97" selection-start-column="26" selection-end-line="97" selection-end-column="26" />
-          <folding>
-            <marker date="1513922685173" expanded="true" signature="814:1118" ph="SELECT t1.`g... t_power_group" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/SalaryPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="175">
-          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/SalaryPanel.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/TranslucenceJPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="10" column="47" lean-forward="false" selection-start-line="10" selection-start-column="47" selection-end-line="10" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/miaodiyun/httpApiDemo/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="50">
@@ -1380,7 +1215,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="325">
           <caret line="17" column="4" lean-forward="false" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="34" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1388,7 +1222,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="499">
           <caret line="25" column="18" lean-forward="false" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1397,7 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="643">
           <caret line="61" column="60" lean-forward="false" selection-start-line="61" selection-start-column="60" selection-end-line="61" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1405,10 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="3" column="16" lean-forward="false" selection-start-line="3" selection-start-column="16" selection-end-line="3" selection-end-column="16" />
-          <folding>
-            <element signature="method#Department#0;class#Department#0" expanded="false" />
-            <element signature="method#toString#0;class#Department#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1416,7 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="275">
           <caret line="14" column="68" lean-forward="false" selection-start-line="14" selection-start-column="68" selection-end-line="14" selection-end-column="68" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1424,29 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="167">
           <caret line="24" column="8" lean-forward="false" selection-start-line="24" selection-start-column="8" selection-end-line="32" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="168" column="9" lean-forward="true" selection-start-line="168" selection-start-column="9" selection-end-line="168" selection-end-column="9" />
-          <folding>
-            <element signature="method#get#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#setEmployee#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#getInfo#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#getAll#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#getList#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#getAllArea#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#queryBy#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#getDepartmentid#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#queryLike#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#batchDelete#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <element signature="method#batchInsert#0;class#EmployeeDAOImpl#0" expanded="false" />
-            <marker date="1514010341340" expanded="true" signature="4911:4956" ph="DELETE FROM " />
-            <marker date="1514010341340" expanded="true" signature="5423:5486" ph="INSERT INTO t_staff_info... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1457,35 +1261,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="275">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="e#229#230#0" expanded="false" />
-            <element signature="e#259#260#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/model/EmployeeInfo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/impl/InformImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="479">
           <caret line="61" column="36" lean-forward="false" selection-start-line="61" selection-start-column="36" selection-end-line="61" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1500,7 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="200">
           <caret line="12" column="26" lean-forward="false" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,75 +1301,27 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.form">
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="451">
-          <caret line="31" column="5" lean-forward="false" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/InformJPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
           <caret line="54" column="60" lean-forward="false" selection-start-line="54" selection-start-column="60" selection-end-line="54" selection-end-column="60" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.form">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="750">
           <caret line="44" column="52" lean-forward="false" selection-start-line="44" selection-start-column="52" selection-end-line="44" selection-end-column="52" />
-          <folding>
-            <element signature="e#2253#2254#0" expanded="false" />
-            <element signature="e#2321#2322#0" expanded="false" />
-            <element signature="e#2703#2704#0" expanded="false" />
-            <element signature="e#2771#2772#0" expanded="false" />
-            <element signature="class#3499:4243" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="ui-designer">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="47" column="56" lean-forward="false" selection-start-line="47" selection-start-column="56" selection-end-line="47" selection-end-column="56" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="method#showTable#0;class#EmployeePanel#0" expanded="false" />
-            <element signature="method#add#0;class#EmployeePanel#0" expanded="false" />
-          </folding>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -1599,9 +1329,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="371">
           <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1622,43 +1349,239 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.form">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1075">
-          <caret line="50" column="29" lean-forward="false" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider editor-type-id="ui-designer">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/LoginFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-50">
+        <state relative-caret-position="575">
           <caret line="35" column="34" lean-forward="false" selection-start-line="35" selection-start-column="34" selection-end-line="35" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/asddsads.java" />
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/asddsads.form" />
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/InformContentDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="600">
+          <caret line="30" column="15" lean-forward="false" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/SalaryPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="7" column="39" lean-forward="false" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/SalaryPanel.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/CWCheckBoxRenderer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="25" column="22" lean-forward="false" selection-start-line="25" selection-start-column="22" selection-end-line="25" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/ui/CheckBoxCellEditor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1116#1117#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.form">
+      <provider editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/model/EmployeeInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="28" column="27" lean-forward="false" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/utils/ExcelUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1725">
+          <caret line="81" column="15" lean-forward="false" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/impl/AdminDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="12" column="14" lean-forward="false" selection-start-line="12" selection-start-column="14" selection-end-line="12" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-981">
+          <caret line="0" column="34" lean-forward="false" selection-start-line="0" selection-start-column="34" selection-end-line="0" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.project">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-274">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/misc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="125">
+          <caret line="5" column="10" lean-forward="true" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.name">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.jsdt.ui.superType.container">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.common.project.facet.core.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.wst.common.component">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/org.eclipse.jdt.core.prefs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.settings/.jsdtscope">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.classpath">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WebContent/META-INF/MANIFEST.MF">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4019">
+          <caret line="230" column="17" lean-forward="false" selection-start-line="230" selection-start-column="17" selection-end-line="230" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.form">
+      <provider selected="true" editor-type-id="ui-designer">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/NewEmployeeDialog.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="70">
+          <caret line="88" column="54" lean-forward="true" selection-start-line="88" selection-start-column="54" selection-end-line="88" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3487#3488#0" expanded="true" />
+            <element signature="e#3565#3566#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
