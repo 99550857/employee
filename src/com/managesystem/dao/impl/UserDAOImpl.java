@@ -76,7 +76,7 @@ public class UserDAOImpl implements UserDAO {
             Map<String,Object> map = (Map<String,Object>) o;
             allDepartmentList.add(
                 new Department(
-                    map.get("id").toString(),
+                        (Integer) map.get("id"),
                     map.get("name").toString(),
                     map.get("introduction").toString(),
                     map.get("contactway").toString()

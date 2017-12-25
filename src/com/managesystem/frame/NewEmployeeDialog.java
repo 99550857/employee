@@ -11,7 +11,6 @@ import java.util.Map;
 /**
  * @author shenwenwu
  * 弹出的新增员工窗口
- *
  */
 public class NewEmployeeDialog extends JDialog {
     private JPanel contentPane;

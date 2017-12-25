@@ -1,9 +1,5 @@
 package com.managesystem.dao.impl;
 
-
-
-
-
 import com.managesystem.dao.EmployeeDAO;
 import com.managesystem.model.Employee;
 import com.managesystem.model.EmployeeInfo;

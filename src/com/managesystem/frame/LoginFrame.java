@@ -16,8 +16,7 @@ import java.util.*;
 
 /**
  * @author shidongyang
- * 登陆界面
- *
+ * 登录界面
  */
 public class LoginFrame extends JFrame{
     private JPanel mainPanel;
@@ -40,7 +39,7 @@ public class LoginFrame extends JFrame{
         mainPanel=new JPanel(){
             @Override
             protected void paintComponent(Graphics g) {
-                ImageIcon imageIcon = new ImageIcon("src/img/1.jpg");
+                ImageIcon imageIcon = new ImageIcon("src/img/2.jpg");
                 imageIcon.setImage(imageIcon.getImage().getScaledInstance((int)screensize.getWidth(),(int)screensize.getHeight(),Image.SCALE_FAST));
                 imageIcon.paintIcon(this,g,0,0);
             }
