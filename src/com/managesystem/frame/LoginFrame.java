@@ -31,7 +31,9 @@ public class LoginFrame extends JFrame{
 
 
     public LoginFrame() {
+
         setComponent();
+        setContentPane(mainPanel);
     }
     public void setComponent(){
         accountCheckBox = new JCheckBox("记住账号");
@@ -62,6 +64,7 @@ public class LoginFrame extends JFrame{
         loginPanel.add(loginButton);
         mainPanel.add(loginPanel);
         accountField.addFocusListener(new JTextFieldHintListener("请输入账号",accountField));
+        SetupAutoComplete.setupAutoComplete(accountField, (ArrayList<String>) userService.getLogInAccount());
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -71,25 +74,26 @@ public class LoginFrame extends JFrame{
                 String info = map.get("info").toString();
                 Map<String, java.util.List<String>> pMap = userService.getPower(account);
                 if("员工".equals(info)||"管理员".equals(info)){
-                    JOptionPane.showMessageDialog(null,"登录成功！");
-                    LoginFrame.this.dispose();
+
+                    //JOptionPane.showMessageDialog(null,"登录成功！");
+
                     if("员工".equals(info)){
                         new UserFrame((Employee)map.get("employee"),pMap);
+                        LoginFrame.this.dispose();
                     }else {
                         new UserFrame((Admin) map.get("admin"),pMap);
+                        LoginFrame.this.dispose();
                     }
+
                 }else {
                     JOptionPane.showMessageDialog(null,info);
                 }
             }
         });
-        SetupAutoComplete.setupAutoComplete(accountField, (ArrayList<String>) userService.getLogInAccount());
     }
 
     public static void main(String[] args) {
-        JFrame frame = new JFrame("LoginFrame");
-        frame.setContentPane(new LoginFrame().mainPanel);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        LoginFrame frame = new LoginFrame();
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame.pack();
         frame.setVisible(true);

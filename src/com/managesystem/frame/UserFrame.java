@@ -32,10 +32,12 @@ public class UserFrame extends JFrame{
     private int i = 0;
     private AttendancePanel ap;
     private EmployeePanel ep;
-    private NoticePanel np;
-
+    private InformPanel np;
+    private Admin admin= null;
+    private Employee employee = null;
     private Map<String,List<String>> pMap;
     public UserFrame(Admin admin, Map<String,List<String>> pMap) {
+        this.admin=admin;
         this.pMap=pMap;
         employeeInfo= userService.getInfo(admin.getAccount());
         init();
@@ -46,6 +48,7 @@ public class UserFrame extends JFrame{
         add(mainPanel);
     }
     public UserFrame(Employee employee, Map<String,List<String>> pMap) {
+        this.employee=employee;
         this.pMap=pMap;
         employeeInfo= userService.getInfo(employee.getEmployeeid());
         init();
@@ -82,7 +85,11 @@ public class UserFrame extends JFrame{
                 centerPanel.add("card1",ep);
             }
             if ("通知管理".equals(groupname)) {
-                np = new NoticePanel(entry.getValue());
+                if(admin!=null){
+                    np = new InformPanel(admin,entry.getValue());
+                }else {
+                    np = new InformPanel(employee,entry.getValue());
+                }
                 centerPanel.add("card2", np);
             }
             if ("考勤管理".equals(groupname)) {
