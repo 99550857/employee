@@ -3,7 +3,9 @@ package com.managesystem.frame;
 import utils.DialogDatePicker;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.*;
+import com.managesystem.model.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -43,16 +45,13 @@ public class NewEmployeeDialog extends JDialog {
     private String[] jiangsuCity = {"徐州","连云港","南京"};
     private String[] zhejiangCity = {"杭州","建德","温州"};
     private String[] anhuiCity = {"芜湖","蚌埠","合肥"};
-    private Map<String,String[]> provinceMap=new HashMap<>();
     private String dateString;
     public NewEmployeeDialog() {
         setModal(true);
         init();
-        pack();
-        setVisible(true);
-        setSize(500, 300);
+        setSize(700, 700);
         setLocationRelativeTo(null);
-        add(contentPane);
+        setContentPane(contentPane);
         取消Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -64,15 +63,22 @@ public class NewEmployeeDialog extends JDialog {
             public void itemStateChanged(ItemEvent e) {
                 if (provinceComboBox.getSelectedItem().toString()==provinces[0]){
                     cityDCB.removeAllElements();
-                    cityDCB.addElement(jiangsuCity);
+                    for (String s : jiangsuCity) {
+                        cityDCB.addElement(s);
+                    }
+
                 }
                 if (provinceComboBox.getSelectedItem().toString()==provinces[1]){
                     cityDCB.removeAllElements();
-                    cityDCB.addElement(zhejiangCity);
+                    for (String s : zhejiangCity) {
+                        cityDCB.addElement(s);
+                    }
                 }
-                if (provinceComboBox.getSelectedItem().toString()==provinces[0]){
+                if (provinceComboBox.getSelectedItem().toString()==provinces[2]){
                     cityDCB.removeAllElements();
-                    cityDCB.addElement(anhuiCity);
+                    for (String s : anhuiCity) {
+                        cityDCB.addElement(s);
+                    }
                 }
             }
         });
@@ -87,18 +93,30 @@ public class NewEmployeeDialog extends JDialog {
                 dateTextField.setText(dateString);
             }
         });
+        确定Button.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                EmployeeInfo employeeInfo = new EmployeeInfo();
+            }
+        });
+        setVisible(true);
+        pack();
     }
     public void init(){
-        provinceMap.put(provinces[0],jiangsuCity);
-        provinceMap.put(provinces[1],zhejiangCity);
-        provinceMap.put(provinces[2],anhuiCity);
         provinceDCB = new DefaultComboBoxModel();
         for (String s:provinces) {
             provinceDCB.addElement(s);
         }
         provinceComboBox.setModel(provinceDCB);
         cityDCB = new DefaultComboBoxModel();
-        cityDCB.addElement(jiangsuCity);
+
+        for (String s : jiangsuCity) {
+            cityDCB.addElement(s);
+        }
         cityComboBox.setModel(cityDCB);
+    }
+
+    public static void main(String[] args) {
+        new NewEmployeeDialog();
     }
 }
