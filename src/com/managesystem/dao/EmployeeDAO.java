@@ -62,4 +62,7 @@ public interface EmployeeDAO {
     String getDepartmentname(String id) throws SQLException;
 
     List<EmployeeInfo> getDepartmentEmployee(String deaprtmentid) throws SQLException;
+
+
+    List<EmployeeInfo> getAllExcept(String employeeid) throws SQLException;
 }

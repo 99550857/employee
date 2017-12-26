@@ -37,11 +37,19 @@ public class MessagePanel extends JPanel{
     private UserService userService = new UserServiceImpl();
     private Map<String,List<EmployeeInfo>> map = new HashMap<>();
     private IconNode root= new IconNode(null,null);
-    public MessagePanel() {
+    private Admin admin= null;
+    private Employee employee=null;
+    public MessagePanel(Admin admin) {
+        this.admin=admin;
         in();
+    }
 
-        //DefaultTreeCellRenderer cellRenderer=(DefaultTreeCellRenderer)tree1.getCellRenderer();
+    public MessagePanel(Employee employee) {
+        this.employee = employee;
+        in();
+    }
 
+    public void in(){
         List<String> departmentNameList = new ArrayList<>();
         List<Department> departmentList = userService.getAllDepartment();
         departmentList.forEach(department -> departmentNameList.add(department.getName()));
@@ -61,7 +69,7 @@ public class MessagePanel extends JPanel{
                 BufferedImage avater = null;
                 try {
                     BufferedImage img = ImageIO.read(is);
-                     avater = RoundAvatar.scaleByPercentage(img,40,40);
+                    avater = RoundAvatar.scaleByPercentage(img,40,40);
                     avater = RoundAvatar.convertCircular(avater);
                 } catch (IOException e) {
                     e.printStackTrace();
@@ -80,9 +88,6 @@ public class MessagePanel extends JPanel{
         tree1.setToggleClickCount(1);
         treePanel.add(tree1,BorderLayout.CENTER);
         add(mainPanel);
-    }
-
-    public void in(){
         CardLayout cardLayout = new CardLayout();
         leftCardPanel.setLayout(cardLayout);
         cardLayout.show(leftCardPanel,"Card1");

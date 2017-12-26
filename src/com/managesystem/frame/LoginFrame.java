@@ -28,7 +28,7 @@ public class LoginFrame extends JFrame{
     private UserService userService=new UserServiceImpl();
     private Dimension screensize = Toolkit.getDefaultToolkit().getScreenSize();
     private JCheckBox accountCheckBox;
-
+    private JPanel panel;
 
     public LoginFrame() {
 
@@ -36,6 +36,11 @@ public class LoginFrame extends JFrame{
         setContentPane(mainPanel);
     }
     public void setComponent(){
+        panel=new TranslucenceJPanel(0.2f);
+        panel.setOpaque(false);
+        panel.setLayout(null);
+        panel.setBounds(720,250,600,600);
+
         accountCheckBox = new JCheckBox("记住账号");
         accountCheckBox.setBounds(180,270,100,20);
         accountCheckBox.setOpaque(false);
@@ -49,20 +54,23 @@ public class LoginFrame extends JFrame{
         };
         loginPanel=new TranslucenceJPanel(0.2f);
         loginPanel.setLayout(null);
-        loginPanel.setBounds(800,270,500,500);
+        loginPanel.setBounds(50,50,500,500);
         loginPanel.setOpaque(false);
         mainPanel.setLayout(null);
+
         accountField=new JTextField("请输入账号");
         accountField.setBounds(150,80,200,40);
         passwordField=new JPasswordField();
         passwordField.setBounds(150,200,200,40);
         loginButton=new JButton("登录");
         loginButton.setBounds(190,350,100,50);
+        mainPanel.add(panel);
+        panel.add(loginPanel);
         loginPanel.add(accountCheckBox);
         loginPanel.add(accountField);
         loginPanel.add(passwordField);
         loginPanel.add(loginButton);
-        mainPanel.add(loginPanel);
+        //mainPanel.add(loginPanel);
         accountField.addFocusListener(new JTextFieldHintListener("请输入账号",accountField));
         SetupAutoComplete.setupAutoComplete(accountField, (ArrayList<String>) userService.getLogInAccount());
         loginButton.addActionListener(new ActionListener() {

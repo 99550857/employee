@@ -174,4 +174,10 @@ public class EmployeeDAOImpl implements EmployeeDAO {
          List<Object> objects = jdbcUtil.excuteQuery(sql,new Object[]{deaprtmentid});
         return getList(objects);
     }
+
+    @Override
+    public List<EmployeeInfo> getAllExcept(String employeeid) throws SQLException {
+
+        return null;
+    }
 }
