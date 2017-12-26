@@ -20,6 +20,7 @@ import java.util.*;
  */
 public class LoginFrame extends JFrame{
     private JPanel mainPanel;
+    private JPanel kuaijiePanel;
     private JPanel loginPanel;
     private JTextField accountField;
     private JPasswordField passwordField;

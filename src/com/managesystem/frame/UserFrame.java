@@ -32,12 +32,11 @@ public class UserFrame extends JFrame{
     private int i = 0;
     private AttendancePanel ap;
     private EmployeePanel ep;
-    private InformPanel np;
-    private Admin admin= null;
-    private Employee employee = null;
+    private NoticePanel np;
+    private SalaryPanel sp;
+
     private Map<String,List<String>> pMap;
     public UserFrame(Admin admin, Map<String,List<String>> pMap) {
-        this.admin=admin;
         this.pMap=pMap;
         employeeInfo= userService.getInfo(admin.getAccount());
         init();
@@ -48,7 +47,6 @@ public class UserFrame extends JFrame{
         add(mainPanel);
     }
     public UserFrame(Employee employee, Map<String,List<String>> pMap) {
-        this.employee=employee;
         this.pMap=pMap;
         employeeInfo= userService.getInfo(employee.getEmployeeid());
         init();
@@ -85,21 +83,22 @@ public class UserFrame extends JFrame{
                 centerPanel.add("card1",ep);
             }
             if ("通知管理".equals(groupname)) {
-                if(admin!=null){
-                    np = new InformPanel(admin,entry.getValue());
-                }else {
-                    np = new InformPanel(employee,entry.getValue());
-                }
+                np = new NoticePanel(entry.getValue());
                 centerPanel.add("card2", np);
             }
             if ("考勤管理".equals(groupname)) {
                 ap = new AttendancePanel(entry.getValue());
                 centerPanel.add("card3", ap);
             }
+            if ("薪资管理".equals(groupname)) {
+                ap = new AttendancePanel(entry.getValue());
+                centerPanel.add("card4", sp);
+            }
             i++;
         }
         for (JButton button: buttons) {
-            button.addActionListener(new ActionListener() {
+            button.addActionListener(new ActionListener(
+            ) {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     String name = button.getText();
@@ -110,6 +109,8 @@ public class UserFrame extends JFrame{
                         card.show(centerPanel, "card2");
                     } else if ("考勤管理".equals(name)) {
                         card.show(centerPanel, "card3");
+                    } else if ("薪资管理".equals(name)) {
+                        card.show(centerPanel, "card4");
                     }
                 }
             });
