@@ -58,15 +58,15 @@ public class EmployeePanel extends JPanel{
     private List<EmployeeInfo>  users ;
     private DefaultComboBoxModel deb1;
     private DefaultComboBoxModel deb2;
-    private String address= null;
+    private String province= null;
     private StringBuffer condition = new StringBuffer();
     private List<Integer> rows = new ArrayList<>();
+    private boolean tableListenerFlag = true;
     public EmployeePanel(java.util.List<String> function) {
         this.function=function;
         setLayout(new BorderLayout());
         onPanel();
         add(panel1);
-
 
     }
 
@@ -109,27 +109,28 @@ public class EmployeePanel extends JPanel{
                         }else {
                             departmentid = String.valueOf("");
                         }
-                        address=areaComboBox.getSelectedItem().toString();
+                        province=areaComboBox.getSelectedItem().toString();
                         if (condition.length() == 0) {
                             if(!"".equals(departmentid)) {
-                                condition.append("WHERE departmentID = '" + departmentid + "'");
+                                condition.append("WHERE departmentid = '" + departmentid + "'");
                             }
-                        } else if(!condition.toString().contains("departmentID")){
+                        } else if(!condition.toString().contains("departmentid")){
                             if(!"".equals(departmentid)) {
-                                condition.append(" AND departmentID = '" + departmentid + "'");
+                                condition.append(" AND departmentid = '" + departmentid + "'");
                             }
-                        }else if(!condition.toString().contains("address")&&condition.toString().contains("departmentID")){
+                        }else if(!condition.toString().contains("province")&&condition.toString().contains("departmentid")){
                             condition=new StringBuffer();
                             if(!"".equals(departmentid)) {
-                                condition.append("WHERE departmentID = '" + departmentid + "'");
+                                condition.append("WHERE departmentid = '" + departmentid + "'");
                             }
                         }else {
                             condition=new StringBuffer();
-                            condition.append("WHERE address = '" + address + "'");
+                            condition.append("WHERE province = '" + province + "'");
                             if(!"".equals(departmentid)) {
-                                condition.append(" AND departmentID = '" + departmentid + "'");
+                                condition.append(" AND departmentid = '" + departmentid + "'");
                             }
                         }
+                        System.out.println(condition);
                         updateModel();
                     }
                 }
@@ -144,30 +145,31 @@ public class EmployeePanel extends JPanel{
                         }else {
                             departmentid = String.valueOf("");
                         }
-                        address=areaComboBox.getSelectedItem().toString();
+                        province=areaComboBox.getSelectedItem().toString();
                         if (condition.length() == 0) {
                             condition=new StringBuffer();
-                            if(!"".equals(address)) {
-                                condition.append("WHERE province = '" + address + "'");
+                            if(!"".equals(province)) {
+                                condition.append("WHERE province = '" + province + "'");
                             }
                         } else if(!condition.toString().contains("province")){
-                            if(!"".equals(address)) {
-                                condition.append(" AND province = '" + address + "'");
+                            if(!"".equals(province)) {
+                                condition.append(" AND province = '" + province + "'");
                             }
                         }else if(!condition.toString().contains("province")&&condition.toString().contains("departmentid")){
                             condition=new StringBuffer();
-                            if(!"".equals(address)) {
-                                condition.append("WHERE province = '" + address + "'");
+                            if(!"".equals(province)) {
+                                condition.append("WHERE province = '" + province + "'");
                             }
                         }else {
                             condition=new StringBuffer();
                             if(!"".equals(departmentid)) {
                                 condition.append("WHERE departmentid = '" + departmentid + "'");
                             }
-                            if(!"".equals(address)) {
-                                condition.append(" AND province = '" + address + "'");
+                            if(!"".equals(province)) {
+                                condition.append(" AND province = '" + province + "'");
                             }
                         }
+                        System.out.println(condition);
                         updateModel();
                     }
                 }
@@ -275,21 +277,25 @@ public class EmployeePanel extends JPanel{
         table1.getModel().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-                int row= e.getFirstRow();
-                int col= e.getColumn();
-                if(row<table1.getRowCount()){
-                    if(table1.getValueAt(row,col).toString()=="true"){
-                        rows.add(row);
-                    }else {
-                        rows.remove(row);
+                if(tableListenerFlag==true) {
+                    int row = e.getFirstRow();
+                    int col = e.getColumn();
+                    if (row < table1.getRowCount()) {
+                        System.out.println(row);
+                        if (table1.getValueAt(row, col).toString() == "true") {
+                            rows.add(row);
+                        } else {
+                            rows.remove(row);
+                        }
                     }
+
                 }
             }
         });
     }
 
     public void updateModel(){
-
+        tableListenerFlag=false;
         users = userService.queryBy(condition.toString());
         int count = dtm.getRowCount();
         for (int i = count-1; i >= 0 ; i--) {
@@ -299,6 +305,7 @@ public class EmployeePanel extends JPanel{
         for(EmployeeInfo e : users){
             add(e);
         }
+        tableListenerFlag=true;
     }
 
     public void add(EmployeeInfo employeeInfo){

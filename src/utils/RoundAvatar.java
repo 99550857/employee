@@ -30,7 +30,7 @@ public class RoundAvatar {
             e.printStackTrace();
         }
     }
-    private  static BufferedImage scaleByPercentage(BufferedImage inputImage, int newWidth, int newHeight) throws Exception {
+    public   static BufferedImage scaleByPercentage(BufferedImage inputImage, int newWidth, int newHeight) throws Exception {
         //获取原始图像透明度类型
         int type = inputImage.getColorModel().getTransparency();
         int width = inputImage.getWidth();
@@ -46,7 +46,7 @@ public class RoundAvatar {
         graphics2d.dispose();
         return img;
     }
-    private static   BufferedImage convertCircular(BufferedImage bi1) throws IOException {
+    public static   BufferedImage convertCircular(BufferedImage bi1) throws IOException {
         //这种是黑色底的
         //BufferedImage bi2 = new BufferedImage(bi1.getWidth(),bi1.getHeight(),BufferedImage.TYPE_INT_RGB);
         //透明底的图片
