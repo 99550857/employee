@@ -14,6 +14,9 @@ import java.util.Set;
  * Created by 99550 on 2017/12/18.
  */
 public interface UserService {
+
+    int[] batchInsert(List<EmployeeInfo> list) ;
+
     /**
      * 通过管理员账号查找对应员工信息
      * @param account
@@ -73,4 +76,6 @@ public interface UserService {
     List<Inform> getPartInform(int departmentid) throws SQLException;
 
     String  getDepartmentname(String id) ;
+
+    List<EmployeeInfo> getDepartmentEmployee(String deaprtmentid) throws SQLException;
 }

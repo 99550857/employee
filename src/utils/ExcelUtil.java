@@ -119,7 +119,7 @@ public class ExcelUtil {
             employeeInfo.setEntry_time(sqlDate);
             employeeInfo.setPhone(phone);
             employeeInfo.setEmail(email);
-            employeeInfo.setAvatar(null);
+            employeeInfo.setAvatar(b);
             studentList.add(employeeInfo);
         }
         return studentList;

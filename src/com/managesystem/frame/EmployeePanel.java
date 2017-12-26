@@ -5,6 +5,7 @@ import com.managesystem.service.impl.UserServiceImpl;
 import com.managesystem.model.*;
 import com.managesystem.ui.CWCheckBoxRenderer;
 import com.managesystem.ui.CheckBoxCellEditor;
+import utils.ExcelUtil;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
@@ -18,8 +19,14 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ItemEvent;
 import java.awt.event.ItemListener;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.InputStream;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
 
 /**
  * @author  lihui
@@ -59,6 +66,8 @@ public class EmployeePanel extends JPanel{
         setLayout(new BorderLayout());
         onPanel();
         add(panel1);
+
+
     }
 
     public void onPanel(){
@@ -152,12 +161,35 @@ public class EmployeePanel extends JPanel{
                             }
                         }else {
                             condition=new StringBuffer();
-                            condition.append("WHERE departmentid = '" + departmentid + "'");
                             if(!"".equals(departmentid)) {
+                                condition.append("WHERE departmentid = '" + departmentid + "'");
+                            }
+                            if(!"".equals(address)) {
                                 condition.append(" AND province = '" + address + "'");
                             }
                         }
                         updateModel();
+                    }
+                }
+            });
+            deleteButton.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    List<String> list = new ArrayList<>();
+                    for (int i:rows) {
+                        list.add(dtm.getValueAt(i,1).toString());
+                    }
+                    int[] result = new int[users.size()];
+                        //调用批量删除方法，得到一个整型数组（受影响的记录行）
+                        result = userService.batchDelete(list);
+                    if (result.length != 0) {
+                        JOptionPane.showMessageDialog(null, "删除成功");
+                        //从表格模型中移除掉已经删除的记录
+                        for (int i = rows.size() - 1; i >= 0; i--) {
+                            dtm.removeRow(rows.get(i));
+                        }
+                    } else {
+                        JOptionPane.showMessageDialog(null, "删除失败");
                     }
                 }
             });
@@ -175,12 +207,35 @@ public class EmployeePanel extends JPanel{
                     }
                 }
             });
+
+            批量导入Button.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    JFileChooser jFileChooser = new JFileChooser();
+                    int n = jFileChooser.showOpenDialog(EmployeePanel.this);
+                    if(n ==JFileChooser.APPROVE_OPTION){
+                        File file = jFileChooser.getSelectedFile();
+                        InputStream inputStream=null;
+                        try {
+                            inputStream = new FileInputStream(file);
+                        } catch (FileNotFoundException e1) {
+                            e1.printStackTrace();
+                        }
+                        List<EmployeeInfo> list = new ExcelUtil().readExcelContent(inputStream);
+                        int []result = userService.batchInsert(list);
+                        if (result.length != 0) {
+                            JOptionPane.showMessageDialog(null, "批量导入成功！");
+                            showTable();
+                        } else {
+                            JOptionPane.showMessageDialog(null, "批量导入失败！");
+                        }
+                    }
+                }
+            });
         }
     }
 
     public void showTable(){
-
-
         dtm = new DefaultTableModel();
         users = new ArrayList<>();
         users = userService.getAll();
@@ -220,13 +275,13 @@ public class EmployeePanel extends JPanel{
         table1.getModel().addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-                int row = e.getFirstRow();
-                int col = e.getColumn();
-                if (row < table1.getColumnCount()) {
-                    if (dtm.getValueAt(row, col).toString() == "true") {
+                int row= e.getFirstRow();
+                int col= e.getColumn();
+                if(row<table1.getRowCount()){
+                    if(table1.getValueAt(row,col).toString()=="true"){
                         rows.add(row);
-                    } else {
-                        rows.remove(rows.indexOf(row));
+                    }else {
+                        rows.remove(row);
                     }
                 }
             }
@@ -234,15 +289,16 @@ public class EmployeePanel extends JPanel{
     }
 
     public void updateModel(){
+
         users = userService.queryBy(condition.toString());
         int count = dtm.getRowCount();
         for (int i = count-1; i >= 0 ; i--) {
             dtm.removeRow(i);
+            rows.removeAll(rows);
         }
         for(EmployeeInfo e : users){
             add(e);
         }
-        rows.removeAll(rows);
     }
 
     public void add(EmployeeInfo employeeInfo){

@@ -17,6 +17,7 @@ import java.util.*;
  *  2017/12/18.
  */
 public class EmployeeDAOImpl implements EmployeeDAO {
+
     JDBCUtil jdbcUtil=JDBCUtil.getInitJDBCUtil();
 
     @Override
@@ -130,7 +131,7 @@ public class EmployeeDAOImpl implements EmployeeDAO {
     public int[] batchInsert(List<EmployeeInfo> list) throws SQLException {
         int[] result;
         Connection connection =jdbcUtil.getConnection();
-        String sql = "INSERT INTO t_staff_info VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+        String sql = "INSERT INTO t_staff_info VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         PreparedStatement ps= connection.prepareStatement(sql);
         for (EmployeeInfo e : list) {
             ps.setString(1, e.getEmployeeid());
@@ -140,14 +141,16 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             ps.setString(5, e.getNation());
             ps.setString(6, e.getProvince());
             ps.setString(7, e.getMunicipality());
-            ps.setString(8, e.getEduback());
-            ps.setString(9, e.getPost());
-            ps.setString(10, e.getTectitle());
-            ps.setString(11, e.getMarital_status());
-            ps.setString(12, e.getPolitical_status());
-            ps.setDate(13, e.getEntry_time());
-            ps.setString(12, e.getPhone());
-            ps.setString(12, e.getEmail());
+            ps.setString(8,e.getAddress());
+            ps.setString(9, e.getEduback());
+            ps.setString(10, e.getPost());
+            ps.setString(11, e.getTectitle());
+            ps.setString(12, e.getMarital_status());
+            ps.setString(13, e.getPolitical_status());
+            ps.setDate(14, e.getEntry_time());
+            ps.setString(15, e.getPhone());
+            ps.setString(16, e.getEmail());
+            ps.setBytes(17,e.getAvatar());
             ps.addBatch();
         }
         result=ps.executeBatch();
@@ -163,5 +166,12 @@ public class EmployeeDAOImpl implements EmployeeDAO {
             return map.get("name").toString();
         }
         return null;
+    }
+
+    @Override
+    public List<EmployeeInfo> getDepartmentEmployee(String deaprtmentid) throws SQLException {
+        String sql= "SELECT * FROM t_staff_info WHERE departmentid = ? ";
+         List<Object> objects = jdbcUtil.excuteQuery(sql,new Object[]{deaprtmentid});
+        return getList(objects);
     }
 }

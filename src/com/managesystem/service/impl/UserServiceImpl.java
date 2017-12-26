@@ -26,6 +26,18 @@ public class UserServiceImpl implements UserService {
     UserDAO userDAO =new UserDAOImpl();
     EmployeeDAO employeeDAO=new EmployeeDAOImpl();
     InformDAO informDAO = new InformImpl();
+
+
+    @Override
+    public int[] batchInsert(List<EmployeeInfo> list) {
+        try {
+            return employeeDAO.batchInsert(list);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return new int[0];
+    }
+
     @Override
     public EmployeeInfo getInfo(String account) {
         EmployeeInfo employeeInfo = null;
@@ -265,6 +277,11 @@ public class UserServiceImpl implements UserService {
             e.printStackTrace();
         }
         return null;
+    }
+
+    @Override
+    public List<EmployeeInfo> getDepartmentEmployee(String deaprtmentid) throws SQLException {
+        return employeeDAO.getDepartmentEmployee(deaprtmentid);
     }
 
 }

@@ -109,6 +109,10 @@ public class InformPanel  extends JPanel{
                 int n = userService.InsertInform(inform);
                 if (n!=0){
                     JOptionPane.showMessageDialog(null,"发布成功");
+                    allInformPanel.removeAll();
+                    departmentInfoPanel.removeAll();
+                    modifyInform();
+                    departmentInform.revalidate();
                     titleTextField.setText("");
                     textArea1.setText("");
                 }else {

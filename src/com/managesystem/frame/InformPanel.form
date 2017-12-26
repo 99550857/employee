@@ -34,7 +34,7 @@
             <properties>
               <background color="-1902730"/>
               <font size="16"/>
-              <foreground color="-4462890"/>
+              <foreground color="-12828863"/>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <opaque value="true"/>
@@ -49,7 +49,7 @@
             <properties>
               <background color="-1902730"/>
               <font size="16"/>
-              <foreground color="-4462890"/>
+              <foreground color="-12828863"/>
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <opaque value="true"/>
