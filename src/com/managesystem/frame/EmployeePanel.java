@@ -25,6 +25,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
@@ -177,8 +178,10 @@ public class EmployeePanel extends JPanel{
             deleteButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    tableListenerFlag=false;
                     List<String> list = new ArrayList<>();
                     for (int i:rows) {
+
                         list.add(dtm.getValueAt(i,1).toString());
                     }
                     int[] result = new int[users.size()];
@@ -187,17 +190,21 @@ public class EmployeePanel extends JPanel{
                     if (result.length != 0) {
                         JOptionPane.showMessageDialog(null, "删除成功");
                         //从表格模型中移除掉已经删除的记录
-                        for (int i = rows.size() - 1; i >= 0; i--) {
+                        Collections.sort(rows,Collections.reverseOrder());
+                        for (int i = rows.size()-1 ; i >= 0; i--) {
                             dtm.removeRow(rows.get(i));
                         }
+                        rows.removeAll(rows);
                     } else {
                         JOptionPane.showMessageDialog(null, "删除失败");
                     }
+                    tableListenerFlag=true;
                 }
             });
             searchButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    tableListenerFlag=false;
                     String keyword = textField1.getText();
                     users = userService.queryLike(keyword);
                     int count = dtm.getRowCount();
@@ -207,6 +214,7 @@ public class EmployeePanel extends JPanel{
                     for(EmployeeInfo employee : users){
                         add(employee);
                     }
+                    tableListenerFlag=true;
                 }
             });
 
@@ -238,6 +246,7 @@ public class EmployeePanel extends JPanel{
     }
 
     public void showTable(){
+        tableListenerFlag=false;
         dtm = new DefaultTableModel();
         users = new ArrayList<>();
         users = userService.getAll();
@@ -273,6 +282,7 @@ public class EmployeePanel extends JPanel{
             content[11] = e.getEmail();
             dtm.addRow(content);
         }
+        tableListenerFlag=true;
         panel1.revalidate();
         table1.getModel().addTableModelListener(new TableModelListener() {
             @Override
@@ -281,11 +291,15 @@ public class EmployeePanel extends JPanel{
                     int row = e.getFirstRow();
                     int col = e.getColumn();
                     if (row < table1.getRowCount()) {
-                        System.out.println(row);
                         if (table1.getValueAt(row, col).toString() == "true") {
                             rows.add(row);
+                            System.out.println(row);
                         } else {
-                            rows.remove(row);
+                            for (int i = 0; i < rows.size(); i++) {
+                                if(rows.get(i)==row){
+                                    rows.remove(i);
+                                }
+                            }
                         }
                     }
 
