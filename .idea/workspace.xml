@@ -2,12 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9b6a6f-47ab-4894-98e2-9b8cae2355ec" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/utils/RoundAvatar.class" afterPath="$PROJECT_DIR$/out/production/employee/utils/RoundAvatar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$2.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$3.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/RoundAvatar.java" afterPath="$PROJECT_DIR$/src/utils/RoundAvatar.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,8 +25,8 @@
       <file leaf-file-name="EmployeePanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-204">
-              <caret line="120" column="73" lean-forward="false" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
+            <state relative-caret-position="52">
+              <caret line="184" column="65" lean-forward="true" selection-start-line="184" selection-start-column="65" selection-end-line="184" selection-end-column="65" />
               <folding />
             </state>
           </provider>
@@ -230,10 +229,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-140" />
-    <option name="y" value="51" />
+    <option name="x" value="-62" />
+    <option name="y" value="2" />
     <option name="width" value="1796" />
-    <option name="height" value="954" />
+    <option name="height" value="935" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -1179,7 +1178,7 @@
       <workItem from="1514119223941" duration="1803000" />
       <workItem from="1514159699451" duration="14409000" />
       <workItem from="1514199073713" duration="2538000" />
-      <workItem from="1514246537101" duration="3962000" />
+      <workItem from="1514246537101" duration="6646000" />
     </task>
     <task id="LOCAL-00001" summary="add new changes">
       <created>1513936799006</created>
@@ -1237,7 +1236,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514246660466</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="modify inform manage">
+      <created>1514250548263</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1514250548263</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1273,10 +1279,10 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="126490000" />
+    <option name="totallyTimeSpent" value="129174000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-140" y="51" width="1796" height="954" extended-state="0" />
+    <frame x="-62" y="2" width="1796" height="935" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1289,7 +1295,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32985386" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2009804" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22208281" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1733,8 +1739,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-204">
-          <caret line="120" column="73" lean-forward="false" selection-start-line="120" selection-start-column="73" selection-end-line="120" selection-end-column="73" />
+        <state relative-caret-position="52">
+          <caret line="184" column="65" lean-forward="true" selection-start-line="184" selection-start-column="65" selection-end-line="184" selection-end-column="65" />
           <folding />
         </state>
       </provider>
