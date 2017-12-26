@@ -54,11 +54,11 @@ public class MessagePanel extends JPanel{
         List<Department> departmentList = userService.getAllDepartment();
         departmentList.forEach(department -> departmentNameList.add(department.getName()));
         for (Department department:departmentList) {
-            try {
-                map.put(department.getName(),userService.getDepartmentEmployee(department.getId()));
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+//            try {
+////                map.put(department.getName(),userService.getDepartmentEmployee(department.getId()));
+//            } catch (SQLException e) {
+//                e.printStackTrace();
+//            }
         }
         for (Map.Entry<String,List<EmployeeInfo>> entry:map.entrySet()) {
             ImageIcon imageIcon = new ImageIcon("src/img/file.png");
@@ -97,7 +97,7 @@ public class MessagePanel extends JPanel{
 
     public static void main(String[] args) {
         JFrame frame = new JFrame("LoginFrame");
-        frame.setContentPane(new MessagePanel());
+//        frame.setContentPane(new MessagePanel());
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
