@@ -28,9 +28,7 @@ public class MessagePanel extends JPanel{
     private JTree tree1;
     private UserService userService = new UserServiceImpl();
     private Map<String,List<EmployeeInfo>> map = new HashMap<>();
-    private IconNode root= new IconNode(
-
-    );
+    private IconNode root= new IconNode(null);
     public MessagePanel() {
         tree1 = new JTree(root);
         treePanel.add(tree1,BorderLayout.CENTER);

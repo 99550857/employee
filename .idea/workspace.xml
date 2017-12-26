@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0f9b6a6f-47ab-4894-98e2-9b8cae2355ec" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/img/file.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/IconNode.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/utils/IconNodeRender.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/EmployeeDAO.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/EmployeeDAO.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/impl/EmployeeDAOImpl.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/dao/impl/EmployeeDAOImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$1.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/frame/EmployeePanel$1.class" />
@@ -20,16 +17,7 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/UserService.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/UserService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/impl/UserServiceImpl.class" afterPath="$PROJECT_DIR$/out/production/employee/com/managesystem/service/impl/UserServiceImpl.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/dao/EmployeeDAO.java" afterPath="$PROJECT_DIR$/src/com/managesystem/dao/EmployeeDAO.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java" afterPath="$PROJECT_DIR$/src/com/managesystem/dao/impl/EmployeeDAOImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/EmployeePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.form" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/InformPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.form" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" afterPath="$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/service/UserService.java" afterPath="$PROJECT_DIR$/src/com/managesystem/service/UserService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/managesystem/service/impl/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/com/managesystem/service/impl/UserServiceImpl.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/utils/ExcelUtil.java" afterPath="$PROJECT_DIR$/src/utils/ExcelUtil.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -58,8 +46,8 @@
       <file leaf-file-name="MessagePanel.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="25">
-              <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="26" selection-end-column="29" />
+            <state relative-caret-position="125">
+              <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -73,8 +61,7 @@
             <state relative-caret-position="600">
               <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
               <folding>
-                <element signature="e#1055#1056#0" expanded="true" />
-                <element signature="e#1116#1117#0" expanded="true" />
+                <element signature="imports" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -1131,7 +1118,7 @@
       <workItem from="1514119223941" duration="1803000" />
       <workItem from="1514159699451" duration="14409000" />
       <workItem from="1514199073713" duration="2538000" />
-      <workItem from="1514246537101" duration="12000" />
+      <workItem from="1514246537101" duration="108000" />
     </task>
     <task id="LOCAL-00001" summary="add new changes">
       <created>1513936799006</created>
@@ -1175,7 +1162,14 @@
       <option name="project" value="LOCAL" />
       <updated>1514160882455</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="modify inform manage">
+      <created>1514246605849</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1514246605849</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -1211,11 +1205,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="122540000" />
+    <option name="totallyTimeSpent" value="122636000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="83" y="32" width="1796" height="970" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -1545,6 +1539,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1800">
           <caret line="79" column="86" lean-forward="false" selection-start-line="79" selection-start-column="86" selection-end-line="79" selection-end-column="86" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1640,8 +1635,7 @@
         <state relative-caret-position="600">
           <caret line="30" column="30" lean-forward="false" selection-start-line="30" selection-start-column="30" selection-end-line="30" selection-end-column="30" />
           <folding>
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1116#1117#0" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1667,8 +1661,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/managesystem/frame/MessagePanel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="25">
-          <caret line="19" column="3" lean-forward="false" selection-start-line="19" selection-start-column="3" selection-end-line="26" selection-end-column="29" />
+        <state relative-caret-position="125">
+          <caret line="30" column="44" lean-forward="false" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
