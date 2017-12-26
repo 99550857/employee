@@ -33,6 +33,7 @@ public class UserFrame extends JFrame{
     private AttendancePanel ap;
     private EmployeePanel ep;
     private NoticePanel np;
+    private SalaryPanel sp;
 
     private Map<String,List<String>> pMap;
     public UserFrame(Admin admin, Map<String,List<String>> pMap) {
@@ -89,10 +90,15 @@ public class UserFrame extends JFrame{
                 ap = new AttendancePanel(entry.getValue());
                 centerPanel.add("card3", ap);
             }
+            if ("薪资管理".equals(groupname)) {
+                ap = new AttendancePanel(entry.getValue());
+                centerPanel.add("card4", sp);
+            }
             i++;
         }
         for (JButton button: buttons) {
-            button.addActionListener(new ActionListener() {
+            button.addActionListener(new ActionListener(
+            ) {
                 @Override
                 public void actionPerformed(ActionEvent e) {
                     String name = button.getText();
@@ -103,6 +109,8 @@ public class UserFrame extends JFrame{
                         card.show(centerPanel, "card2");
                     } else if ("考勤管理".equals(name)) {
                         card.show(centerPanel, "card3");
+                    } else if ("薪资管理".equals(name)) {
+                        card.show(centerPanel, "card4");
                     }
                 }
             });
