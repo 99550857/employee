@@ -5,7 +5,8 @@ import com.managesystem.service.impl.UserServiceImpl;
 import com.managesystem.model.*;
 import com.managesystem.ui.CWCheckBoxRenderer;
 import com.managesystem.ui.CheckBoxCellEditor;
-import utils.ExcelUtil;
+import utils.EmployeeInfoExcelUtil;
+import utils.SalaryExcelUtil;
 
 import javax.swing.*;
 import javax.swing.event.TableModelEvent;
@@ -23,11 +24,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author  lihui
@@ -231,7 +230,7 @@ public class EmployeePanel extends JPanel{
                         } catch (FileNotFoundException e1) {
                             e1.printStackTrace();
                         }
-                        List<EmployeeInfo> list = new ExcelUtil().readExcelContent(inputStream);
+                        List<EmployeeInfo> list = new EmployeeInfoExcelUtil().readExcelContent(inputStream);
                         int []result = userService.batchInsert(list);
                         if (result.length != 0) {
                             JOptionPane.showMessageDialog(null, "批量导入成功！");

@@ -17,7 +17,7 @@ import java.util.List;
  * @author xu
  * 操作Excel表格的功能类
  */
-public class ExcelUtil {
+public class SalaryExcelUtil {
     //excel文件对象
     private POIFSFileSystem fs;
     // 工作簿对象
@@ -71,8 +71,8 @@ public class ExcelUtil {
     public static void main(String[] args) throws Exception {
         File file = new File("C:\\Users\\lenovo\\Desktop\\员工工资表.xls");
         InputStream is = new FileInputStream(file);
-        ExcelUtil excelUtil = new ExcelUtil();
-        List<PostSalary> postSalaryList = excelUtil.readExcelContent(is);
+        SalaryExcelUtil salaryExcelUtil = new SalaryExcelUtil();
+        List<PostSalary> postSalaryList = salaryExcelUtil.readExcelContent(is);
         postSalaryList.forEach(student -> System.out.println(student));
     }
 }
