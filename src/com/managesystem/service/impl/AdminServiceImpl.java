@@ -34,7 +34,10 @@ public class AdminServiceImpl implements Adminservice {
         return checkOnDAO.getStaff();
     }
 
-
+    @Override
+    public List<AdminCheck> getDate() throws SQLException {
+        return checkOnDAO.getDate();
+    }
 
 
 }

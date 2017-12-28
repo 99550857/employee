@@ -153,53 +153,30 @@ public class AttendPanel extends JPanel{
                     row++;
                 }
                 try {
-                    adminChecks = adminservice.getCheckList();
+                    adminChecks = adminservice.getDate();
                 } catch (SQLException e1) {
                     e1.printStackTrace();
                 }
                 if (adminChecks != null){
-                    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-                    String  date = sdf.format(new Date());
-                    Iterator<AdminCheck> iterator1 = adminChecks.iterator();
-                    while (iterator1.hasNext()){
-                        AdminCheck adminCheck = iterator1.next();
-                        String beforeTime = sdf.format(adminCheck.getDate());
-                        Date bf = null;
-                        Date now = null;
+                    if (adminChecks != null) {
+                        JOptionPane.showMessageDialog(null, "今日已打卡");
+
+                    }else {
+                        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                        Date dt =null;
+                        java.sql.Date checkDate = new java.sql.Date(dt.getTime());
+                        AdminCheck  adminCheck = new AdminCheck(dept,name,workID,checkDate,typeString);
                         try {
-                            bf = sdf.parse(beforeTime);
-                            now = sdf.parse(date);
-                        } catch (ParseException e1) {
+                            n =adminservice.insertCheck(adminCheck);
+
+                        } catch (SQLException e1) {
                             e1.printStackTrace();
                         }
-
-                        if (bf.getTime() != now.getTime()){
-                            Date dt = null;
-                            try {
-                                dt= sdf.parse(date);
-                            } catch (ParseException e1) {
-                                e1.printStackTrace();
-                            }
-                            java.sql.Date checkDate = new java.sql.Date(dt.getTime());
-                            adminCheck = new AdminCheck(dept,name,workID,checkDate,typeString);
-                            try {
-                                n =adminservice.insertCheck(adminCheck);
-
-                            } catch (SQLException e1) {
-                                e1.printStackTrace();
-                            }
-                        }
-                        if (bf.getTime() == now.getTime()){
-                            JOptionPane.showMessageDialog(null,"今日已打卡");
-                        }
                     }
-
+                    if (n != 0) {
+                        JOptionPane.showMessageDialog(null, "考勤成功");
+                    }
                 }
-
-                if (n != 0){
-                    JOptionPane.showMessageDialog(null,"考勤成功");
-                }
-
             }
         });
     }

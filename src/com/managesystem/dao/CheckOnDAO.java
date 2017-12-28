@@ -3,6 +3,7 @@ package com.managesystem.dao;
 
 import com.managesystem.model.AdminCheck;
 
+import java.sql.Date;
 import java.sql.SQLException;
 import java.util.List;
 
@@ -40,6 +41,7 @@ public interface CheckOnDAO {
      */
     List<AdminCheck> getStaff()throws SQLException;
 
+    List<AdminCheck> getDate()throws SQLException;
 
 
 }

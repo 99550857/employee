@@ -21,4 +21,5 @@ public interface Adminservice {
 
     List<AdminCheck> getStaff()throws SQLException;
 
+    List<AdminCheck> getDate()throws SQLException;
 }

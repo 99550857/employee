@@ -80,7 +80,18 @@ public class CheckOnDAOImpl implements CheckOnDAO {
         return adminChecks;
     }
 
+    @Override
+    public List<AdminCheck> getDate() throws SQLException {
+        String sql = "SELECT * FROM t_check_log  WHERE TO_DAYS(date) = TO_DAYS(now()) ";
+        List<Object> list = jdbcUtil.excuteQuery(sql, null);
+        List<AdminCheck> adminChecks = new ArrayList<>();
+        for (Object object : list) {
+            Map<String, Object> map = (Map<String, Object>) object;
+            AdminCheck adminCheck = new AdminCheck((Date) map.get("date"));
+            adminChecks.add(adminCheck);
+        }
 
-
+        return adminChecks;
+    }
 
 }
