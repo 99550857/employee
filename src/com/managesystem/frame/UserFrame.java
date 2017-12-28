@@ -34,6 +34,7 @@ public class UserFrame extends JFrame{
     private EmployeePanel ep;
     private NoticePanel np;
     private SalaryPanel sp;
+    private AttendPanel ap1;
 
     private Map<String,List<String>> pMap;
     public UserFrame(Admin admin, Map<String,List<String>> pMap) {
@@ -87,8 +88,8 @@ public class UserFrame extends JFrame{
                 centerPanel.add("card2", np);
             }
             if ("考勤管理".equals(groupname)) {
-                ap = new AttendancePanel(entry.getValue());
-                centerPanel.add("card3", ap);
+                ap1 = new AttendPanel(entry.getValue());
+                centerPanel.add("card3", ap1);
             }
             if ("薪资管理".equals(groupname)) {
                 ap = new AttendancePanel(entry.getValue());
