@@ -3,8 +3,12 @@ package com.managesystem.ui;
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.border.EmptyBorder;
+import javax.swing.event.ChangeEvent;
+import javax.swing.event.ChangeListener;
 import javax.swing.table.TableCellRenderer;
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 /**
  * Created by 99550 on 2017/12/24.
@@ -24,7 +28,14 @@ public class CWCheckBoxRenderer extends JCheckBox implements TableCellRenderer{
         super();
         setOpaque(true);
         setHorizontalAlignment(SwingConstants.CENTER);
+        addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                    CWCheckBoxRenderer.this.setFocusable(false);
+            }
+        });
     }
+
 
     //~ Methods --------------------------------------------------------------------------------------------------------
 
@@ -46,4 +57,5 @@ public class CWCheckBoxRenderer extends JCheckBox implements TableCellRenderer{
 
         return this;
     }
+
 }
