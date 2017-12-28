@@ -17,8 +17,8 @@ public class DepartmentDAOImpl implements DepartmentDAO{
 
     @Override
     public int insert(Department department) throws SQLException {
-        String sql = "INSERT INTO t_department VALUES (?,?,?,?) ";
-        Object[] params = {department.getId(),department.getName(),department.getIntroduction(),department.getContactway()};
+        String sql = "INSERT INTO t_department VALUES (?,?,?,?,?,?) ";
+        Object[] params = {department.getId(),department.getName(),department.getIntroduction(),department.getContactway(),department.getLogo(),department.getCount()};
         int n = jdbcUtil.executeUpdate(sql,params);
         return n;
     }
@@ -41,7 +41,7 @@ public class DepartmentDAOImpl implements DepartmentDAO{
 
     @Override
     public int update(Department department) throws SQLException {
-        String sql = "UPDATE t_department SET introduction = ? ";
+        String sql = "UPDATE t_department SET logo = ?, name = ?, introduction = ?, count = ?, contactway = ?, ";
         Object[] params = {department.getIntroduction()};
         int n = jdbcUtil.executeUpdate(sql,params);
         return n;
@@ -55,7 +55,9 @@ public class DepartmentDAOImpl implements DepartmentDAO{
             Department department = new Department((Integer)map.get("id"),
                                                     map.get("name").toString(),
                                                     map.get("introduction").toString(),
-                                                    map.get("contactway").toString());
+                                                    map.get("contactway").toString(),
+                                                    (byte[]) map.get("logo"),
+                                                    (Integer)map.get("count"));
             return department;
         }else {
             return null;
@@ -89,6 +91,14 @@ public class DepartmentDAOImpl implements DepartmentDAO{
 
     }
 
+    @Override
+    public int delete(int id) throws SQLException {
+        String sql = "DELETE FROM t_department WHERE id = ? ";
+        Object[] params = {id};
+        int n = jdbcUtil.executeUpdate(sql, params);
+        return n;
+    }
+
 
     private List<String> getNameList(List<Object> list){
         List<String> names = new ArrayList<>();
@@ -112,7 +122,9 @@ public class DepartmentDAOImpl implements DepartmentDAO{
             Department department = new Department((Integer) map.get("id"),
                                                     map.get("name").toString(),
                                                     map.get("introduction").toString(),
-                                                    map.get("contactway").toString());
+                                                    map.get("contactway").toString(),
+                                                    (byte[])map.get("logo"),
+                                                    (Integer)map.get("count"));
             departments.add(department);
         }
         return departments;

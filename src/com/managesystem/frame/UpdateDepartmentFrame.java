@@ -10,21 +10,20 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 
-public class NewDepartmentFrame extends JFrame{
+public class UpdateDepartmentFrame extends JFrame{
     private JPanel mainPanel;
     private JTextField nameField;
-    private JTextField countField;
     private JTextField introductionField;
+    private JTextField countField;
     private JTextField contactwayField;
-    private JButton addButton;
-    private JTextField idField;
-    private JButton 选择Button;
+    private JButton 确认修改Button;
+    private JButton 选择图片Button;
     private JLabel logoLabel;
     private byte[] b;
+    private Department department = null;
     private DepartmentService departmentService = ServiceFactory.getDepartmentService();
-    private DepartmentPanel departmentPanel;
 
-    public NewDepartmentFrame(){
+    public UpdateDepartmentFrame(){
         setTitle("新增部门");
         setSize(600,700);
         this.getContentPane().add(mainPanel);
@@ -32,33 +31,36 @@ public class NewDepartmentFrame extends JFrame{
         setVisible(true);
         setLocationRelativeTo(null);
 
-        addButton.addActionListener(new ActionListener() {
+
+        确认修改Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                Integer id = Integer.valueOf(idField.getText());
                 String nameString = nameField.getText();
-                Integer count = Integer.valueOf(countField.getText());
                 String introductionString = introductionField.getText();
+                String countString = countField.getText();
                 String contactwayString = contactwayField.getText();
-                Department department = new Department(id,nameString,introductionString,contactwayString,b,count);
+                //将部门信息更新
+                department.setLogo(b);
+                department.setName(nameString);
+                department.setIntroduction(introductionString);
+                department.setCount(Integer.valueOf(countString));
+                department.setContactway(contactwayString);
                 int n = 0;
-                n = departmentService.insert(department);
-                if (n != 0) {
-                    JOptionPane.showMessageDialog(null,"新增学生成功");
-                    NewDepartmentFrame.this.dispose();
-                    departmentPanel.add(department);
+                n = departmentService.update(department);
+                if (n != 0){
+                    JOptionPane.showMessageDialog(null,"修改成功");
                 } else {
-                    JOptionPane.showMessageDialog(null,"新增学生失败");
+                    JOptionPane.showMessageDialog(null,"修改失败");
                 }
 
             }
         });
-        选择Button.addActionListener(new ActionListener() {
+        选择图片Button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                //点击头像，更换头像
                 JFileChooser chooser = new JFileChooser();
-                int n = chooser.showOpenDialog(NewDepartmentFrame.this);
+                int n = chooser.showOpenDialog(UpdateDepartmentFrame.this);
                 if (n == JFileChooser.APPROVE_OPTION) {
                     File file = chooser.getSelectedFile();
                     b = FileUtils.fileToBytes(file);
@@ -67,4 +69,6 @@ public class NewDepartmentFrame extends JFrame{
             }
         });
     }
+
+
 }

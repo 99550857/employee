@@ -61,5 +61,13 @@ public interface DepartmentDAO {
      */
     List<String> getAllName() throws SQLException;
 
+    /**
+     * 单个删除部门
+     * @param id
+     * @return
+     * @throws SQLException
+     */
+    int delete(int id) throws SQLException;
+
 
 }

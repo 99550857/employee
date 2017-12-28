@@ -4,7 +4,9 @@ import com.managesystem.factory.DAOFactory;
 import com.managesystem.model.Department;
 import org.junit.Before;
 import org.junit.Test;
+import utils.FileUtils;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +23,9 @@ public class DepartmentDAOTest {
 
     @Test
     public void insert() throws Exception {
-        Department department = new Department(4,"总经理","总经理","15475896325");
+        File file = new File("d:/default.png");
+        byte[] b = FileUtils.fileToBytes(file);
+        Department department = new Department(4,"总经理","总经理","15475896325",b,26);
         int n = departmentDAO.insert(department);
         assertEquals(1,n);
     }
@@ -57,6 +61,12 @@ public class DepartmentDAOTest {
     public void getAllName() throws Exception {
         List<String> nameList = departmentDAO.getAllName();
         nameList.forEach(s -> System.out.println(s));
+    }
+
+    @Test
+    public void delete() throws Exception {
+        int n = departmentDAO.delete(2);
+        assertEquals(1, n);
     }
 
 }

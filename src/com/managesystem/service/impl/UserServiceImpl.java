@@ -1,15 +1,9 @@
 package com.managesystem.service.impl;
 
-import com.managesystem.dao.AdminDAO;
-import com.managesystem.dao.EmployeeDAO;
-import com.managesystem.dao.InformDAO;
-import com.managesystem.dao.UserDAO;
+import com.managesystem.dao.*;
 
 
-import com.managesystem.dao.impl.AdminDAOImpl;
-import com.managesystem.dao.impl.EmployeeDAOImpl;
-import com.managesystem.dao.impl.InformImpl;
-import com.managesystem.dao.impl.UserDAOImpl;
+import com.managesystem.dao.impl.*;
 import com.managesystem.model.*;
 import com.managesystem.service.UserService;
 import utils.MD5;
@@ -26,7 +20,7 @@ public class UserServiceImpl implements UserService {
     UserDAO userDAO =new UserDAOImpl();
     EmployeeDAO employeeDAO=new EmployeeDAOImpl();
     InformDAO informDAO = new InformImpl();
-
+    DepartmentDAO departmentDAO = new DepartmentDAOImpl();
 
     @Override
     public int[] batchInsert(List<EmployeeInfo> list) {
@@ -282,6 +276,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<EmployeeInfo> getDepartmentEmployee(String deaprtmentid) throws SQLException {
         return employeeDAO.getDepartmentEmployee(deaprtmentid);
+    }
+
+    @Override
+    public Department getDepartment(Integer id) {
+        try {
+            return departmentDAO.getDepartment(id);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return null;
+        }
     }
 
 }

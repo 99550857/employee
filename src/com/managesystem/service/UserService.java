@@ -78,4 +78,6 @@ public interface UserService {
     String  getDepartmentname(String id) ;
 
     List<EmployeeInfo> getDepartmentEmployee(String deaprtmentid) throws SQLException;
+
+    Department getDepartment(Integer id) ;
 }

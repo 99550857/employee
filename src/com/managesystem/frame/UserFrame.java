@@ -1,8 +1,11 @@
 package com.managesystem.frame;
 
+import com.managesystem.factory.ServiceFactory;
 import com.managesystem.model.Admin;
+import com.managesystem.model.Department;
 import com.managesystem.model.Employee;
 import com.managesystem.model.EmployeeInfo;
+import com.managesystem.service.DepartmentService;
 import com.managesystem.service.UserService;
 import com.managesystem.service.impl.UserServiceImpl;
 import utils.RoundAvatar;
@@ -34,6 +37,7 @@ public class UserFrame extends JFrame{
     private EmployeePanel ep;
     private NoticePanel np;
     private SalaryPanel sp;
+    private DepartmentService departmentService = ServiceFactory.getDepartmentService();
 
     private Map<String,List<String>> pMap;
     public UserFrame(Admin admin, Map<String,List<String>> pMap) {
@@ -94,6 +98,16 @@ public class UserFrame extends JFrame{
                 ap = new AttendancePanel(entry.getValue());
                 centerPanel.add("card4", sp);
             }
+            if ("部门管理".equals(groupname)){
+                java.util.List<Department> departmentList = departmentService.getAllDepartments();
+                JPanel dpPanel = new JPanel(new FlowLayout(FlowLayout.LEFT,50,30));
+                dpPanel.setPreferredSize(new Dimension(500,500));
+                centerPanel.add("card5",dpPanel);
+                for (Department department : departmentList) {
+                    DepartmentPanel dp = new DepartmentPanel(department,entry.getValue());
+                    dpPanel.add(dp);
+                }
+            }
             i++;
         }
         for (JButton button: buttons) {
@@ -111,6 +125,8 @@ public class UserFrame extends JFrame{
                         card.show(centerPanel, "card3");
                     } else if ("薪资管理".equals(name)) {
                         card.show(centerPanel, "card4");
+                    }else if ("部门管理".equals(name)) {
+                        card.show(centerPanel,"card5");
                     }
                 }
             });

@@ -39,6 +39,7 @@ public class UserDAOImpl implements UserDAO {
         List<String> itemList1 = new ArrayList<>();
         List<String> itemList2 = new ArrayList<>();
         List<String> itemList3 = new ArrayList<>();
+        List<String> itemList4 = new ArrayList<>();
         Set<String> nameSet = new HashSet<>();
         while (rs.next()) {
             String group_name = rs.getString("groupname");
@@ -53,8 +54,11 @@ public class UserDAOImpl implements UserDAO {
             if (item_name.contains("员工")) {
                 itemList3.add(item_name);
             }
+            if (item_name.contains("部门")){
+                itemList4.add(item_name);
+            }
         }
-        List<String>[] lists = new List[]{itemList1, itemList2, itemList3};
+        List<String>[] lists = new List[]{itemList1, itemList2, itemList4,itemList3};
         for (int i = 0, j = 0; i < lists.length; i++) {
             if (lists[i].size() != 0) {
                 String name = nameSet.toArray()[j].toString();
@@ -79,7 +83,9 @@ public class UserDAOImpl implements UserDAO {
                         (Integer) map.get("id"),
                     map.get("name").toString(),
                     map.get("introduction").toString(),
-                    map.get("contactway").toString()
+                    map.get("contactway").toString(),
+                        (byte[])map.get("logo"),
+                        (Integer)map.get("count")
                 )
             );
         }
