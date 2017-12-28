@@ -16,16 +16,12 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumnModel;
 import java.awt.*;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStream;
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.*;
 import java.util.List;
 
 /**
@@ -61,7 +57,7 @@ public class EmployeePanel extends JPanel{
     private String province= null;
     private StringBuffer condition = new StringBuffer();
     private List<Integer> rows = new ArrayList<>();
-    private boolean tableListenerFlag = true;
+    private Boolean tableCheckBoxFlag = true;
     public EmployeePanel(java.util.List<String> function) {
         this.function=function;
         setLayout(new BorderLayout());
@@ -177,10 +173,19 @@ public class EmployeePanel extends JPanel{
             deleteButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    tableListenerFlag=false;
+                    tableCheckBoxFlag = false;
                     List<String> list = new ArrayList<>();
+                    Set<Integer> set =  new HashSet<Integer>();
+                    set.addAll(rows);
+                    rows.clear();
+                    rows.addAll(set);
+//                    for (int i = 0; i < table1.getRowCount(); i++) {
+//                        if(dtm.getValueAt(i,0).toString()=="true"){
+//                            rows.add(i);
+//                        }
+//                    }
                     for (int i:rows) {
-
+                        System.out.println(i);
                         list.add(dtm.getValueAt(i,1).toString());
                     }
                     int[] result = new int[users.size()];
@@ -190,20 +195,21 @@ public class EmployeePanel extends JPanel{
                         JOptionPane.showMessageDialog(null, "删除成功");
                         //从表格模型中移除掉已经删除的记录
                         Collections.sort(rows,Collections.reverseOrder());
-                        for (int i = rows.size()-1 ; i >= 0; i--) {
-                            dtm.removeRow(rows.get(i));
+                        for (int i:rows) {
+                            dtm.removeRow(i);
                         }
-                        rows.removeAll(rows);
+                        rows=new ArrayList<>();
                     } else {
                         JOptionPane.showMessageDialog(null, "删除失败");
                     }
-                    tableListenerFlag=true;
+                    tableCheckBoxFlag = true;
                 }
             });
             searchButton.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    tableListenerFlag=false;
+                    tableCheckBoxFlag = false;
+                    rows=new ArrayList<Integer>();
                     String keyword = textField1.getText();
                     users = userService.queryLike(keyword);
                     int count = dtm.getRowCount();
@@ -213,13 +219,15 @@ public class EmployeePanel extends JPanel{
                     for(EmployeeInfo employee : users){
                         add(employee);
                     }
-                    tableListenerFlag=true;
+                    tableCheckBoxFlag= true;
                 }
             });
 
             批量导入Button.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    tableCheckBoxFlag= false;
+                    rows=new ArrayList<Integer>();
                     JFileChooser jFileChooser = new JFileChooser();
                     int n = jFileChooser.showOpenDialog(EmployeePanel.this);
                     if(n ==JFileChooser.APPROVE_OPTION){
@@ -239,18 +247,31 @@ public class EmployeePanel extends JPanel{
                             JOptionPane.showMessageDialog(null, "批量导入失败！");
                         }
                     }
+                    tableCheckBoxFlag=true;
+
                 }
             });
         }
     }
 
     public void showTable(){
-        tableListenerFlag=false;
-        dtm = new DefaultTableModel();
+        tableCheckBoxFlag=false;
+        rows=new ArrayList<>();
+        dtm = new DefaultTableModel(){
+            @Override
+            public boolean isCellEditable(int row, int column) {
+                if(column==0){
+                    return true;
+                }else {
+                    return false;
+                }
+            }
+        };
         users = new ArrayList<>();
         users = userService.getAll();
         String []title={" ","工号","部门编号","姓名","性别","名族","详细地址","学历","职务","入职时间","电话","邮箱"};
         dtm.setColumnIdentifiers(title);
+
         table1.setModel(dtm);
         TableColumnModel tcm= table1.getColumnModel();
         tcm.getColumn(0).setCellEditor(new DefaultCellEditor(new JCheckBox()));
@@ -281,34 +302,54 @@ public class EmployeePanel extends JPanel{
             content[11] = e.getEmail();
             dtm.addRow(content);
         }
-        tableListenerFlag=true;
+        tableCheckBoxFlag=true;
         panel1.revalidate();
-        table1.getModel().addTableModelListener(new TableModelListener() {
+        dtm.addTableModelListener(new TableModelListener() {
             @Override
             public void tableChanged(TableModelEvent e) {
-                if(tableListenerFlag==true) {
-                    int row = e.getFirstRow();
-                    int col = e.getColumn();
-                    if (row < table1.getRowCount()) {
-                        if (table1.getValueAt(row, col).toString() == "true") {
-                            rows.add(row);
-                            System.out.println(row);
-                        } else {
-                            for (int i = 0; i < rows.size(); i++) {
-                                if(rows.get(i)==row){
-                                    rows.remove(i);
-                                }
+                if(tableCheckBoxFlag == true){
+                    int row =e.getFirstRow();
+                    rows.forEach(integer -> System.out.println(integer));
+                    if (dtm.getValueAt(row, 0).toString() == "true") {
+                        rows.add(row);
+                        System.out.println(row);
+                    }else {
+                        for (int i = 0; i < rows.size(); i++) {
+                            if(rows.get(i)==row){
+                                rows.remove(i);
                             }
                         }
                     }
-
+                }
+            }
+        });
+        table1.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent e) {
+                if(e.getClickCount()==1){
+                    int row = table1.getSelectedRow();
+                    String id = (String) table1.getValueAt(row,1);
+                    EmployeeInfo employeeInfo = userService.getInfo(id);
+                    JFrame jFrame = new JFrame();
+                    jFrame.setUndecorated(true);
+                    jFrame.setContentPane(new DetailedInfo(employeeInfo,jFrame));
+                    jFrame.setSize(600,400);
+                    jFrame.pack();
+                    jFrame.setLocationRelativeTo(null);
+                    jFrame.setVisible(true);
+                    jFrame.addFocusListener(new FocusAdapter() {
+                        @Override
+                        public void focusLost(FocusEvent e) {
+                            jFrame.dispose();
+                        }
+                    });
                 }
             }
         });
     }
 
     public void updateModel(){
-        tableListenerFlag=false;
+        tableCheckBoxFlag=true;
         users = userService.queryBy(condition.toString());
         int count = dtm.getRowCount();
         for (int i = count-1; i >= 0 ; i--) {
@@ -318,7 +359,7 @@ public class EmployeePanel extends JPanel{
         for(EmployeeInfo e : users){
             add(e);
         }
-        tableListenerFlag=true;
+        tableCheckBoxFlag=false;
     }
 
     public void add(EmployeeInfo employeeInfo){
